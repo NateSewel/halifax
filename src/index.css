@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #036eb7;
+  --color-primary1: #ffffff;
+  --color-neutral: #eeeeee;
+  --color-neutral1: #cccccc;
+  --color-neutral2: #aaaaaa;
+  --color-dark1: #000000;
+  --color-dark2: #111111;
+  --color-dark3: #222222;
+  --color-dark4: #444444;
+  --color-dark5: #666666;
+  --color-green: #027a48;
+  --color-green1: #ecfcf3;
+  --color-error-red: #b42318;
+  --color-error-red1: #fef3f2;
+  --color-footer: #eef3f6;
+  --color-footer1: #fdfcfd;
+  --color-footer-text: #4c4c4c;
+  --color-text: #ededed;
+  --color-text1: #a0a0a0;
+  --font-inter: "Inter", sans-serif;
+  --body-font: "Inter", sans-serif;
+}
+
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--color-footer);
+}
+
+/* ====================LAYOUT======================== */
+
+/* ====================BREAKPOINTS======================== */
+/* For large devices */
+@media screen and (max-width: 1208px) {
+}
+
+/* For medium devices */
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 768px) {
+}
+
+/* For small devices */
+@media screen and (max-width: 576px) {
+}
+
+@media screen and (max-width: 460px) {
+}
