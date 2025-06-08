@@ -53,7 +53,7 @@ const FAQItem = ({ question, answer }) => {
 
       {isOpen && (
         <div className="mt-1">
-          <div className="flex-grow h-px md:w-[580px] bg-dark4 ml-3"></div>
+          <div className="flex-grow h-px md:w-[480px] bg-dark4 ml-3"></div>
           <p className="text-sm text-start font-medium text-dark4 p-4">
             {answer}
           </p>

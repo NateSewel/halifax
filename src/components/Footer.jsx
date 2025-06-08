@@ -23,7 +23,7 @@ const Footer = () => {
           </div>
 
           {/* CTA Button */}
-          <button className="flex items-center gap-2 text-sm font-semibold px-6 py-3 bg-footer rounded-xl hover:bg-footer1 cursor-pointer transition-colors w-full md:w-auto justify-center">
+          <button className="flex items-center gap-2 text-sm font-semibold px-6 py-3 bg-footer rounded-xl hover:bg-footer1 cursor-pointer transition-colors w-full md:w-[19%] justify-center">
             REGISTER NOW <GoArrowUpRight size={24} />
           </button>
         </div>
@@ -188,19 +188,19 @@ const Footer = () => {
             <div className="flex space-x-6">
               <a
                 href="#"
-                className="text-gray-600 hover:text-linkedin transition-colors text-sm underline"
+                className="text-gray-600 hover:text-linkedin transition-colors text-xs md:text-sm underline"
               >
                 Privacy Policy
               </a>
               <a
                 href="#"
-                className="text-gray-600 hover:text-linkedin transition-colors text-sm underline"
+                className="text-gray-600 hover:text-linkedin transition-colors text-xs md:text-sm underline"
               >
                 Terms of Service
               </a>
               <a
                 href="#"
-                className="text-gray-600 hover:text-linkedin transition-colors text-sm underline"
+                className="text-gray-600 hover:text-linkedin transition-colors text-xs md:text-sm underline"
               >
                 Cookies Settings
               </a>

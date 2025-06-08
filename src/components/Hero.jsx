@@ -153,8 +153,8 @@ const SponsorLogos = () => {
 
 const Hero = () => {
   return (
-    <section className="container mx-auto md:px-16 py-1 md:py-12">
-      <div className="relative md:m-6 m-0 mt-6">
+    <section className="mx-auto w-[86%]">
+      <div className="relative mt-4">
         {/* Hero section with semi-transparent background image */}
         <div className="relative h-[400px] w-full justify-center items-center md:h-[657px] rounded-4xl overflow-hidden">
           {/* Background image with opacity */}
@@ -208,7 +208,7 @@ const Hero = () => {
       </div>
 
       {/* Sponsors section with 5x5 grid */}
-      <div className="container mx-auto pt-0 mt-0 mb-12">
+      <div className="mx-auto pt-0 mt-0 mb-12">
         <SponsorLogos />
       </div>
     </section>

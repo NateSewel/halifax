@@ -25,45 +25,44 @@ const Navbar1 = () => {
   return (
     <Disclosure
       as="nav"
-      className="bg-footer1 border-6 border-white p-4 sm:mx-12 mt-6 shadow-md rounded-2xl"
+      className="bg-footer1 border-4 border-white mx-auto w-[86%] mt-4 shadow-md m-3 p-1 rounded-lg md:rounded-2xl md:p-2 lg:p-3"
     >
-      <div className="mx-auto max-w-8xl px-2 sm:px-6 lg:px-8">
-        <div className="relative flex items-center justify-between h-16">
-          {/* Mobile menu button (left side) */}
-          <div className="absolute right-0 flex items-center font-extrabold sm:hidden">
-            <DisclosureButton className="inline-flex items-center justify-center p-2 rounded-md text-black font-extrabold hover:bg-gray-700 focus:outline-none">
-              <span className="sr-only">Open main menu</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="size-8 font-extrabold"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M3.75 9h16.5m-16.5 6.75h16.5"
-                  className="block h-6 w-6 font-extrabold"
-                  aria-hidden="true"
-                />
-              </svg>
-            </DisclosureButton>
-          </div>
+      <div className="px-6 lg:px-20">
+        {/* Mobile menu button */}
+        <div className="absolute right-9 flex items-center lg:hidden">
+          <DisclosureButton className="inline-flex items-center justify-center p-1  rounded-md text-black hover:bg-gray-700 focus:outline-none">
+            <span className="sr-only">Open main menu</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="size-8"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3.75 9h16.5m-16.5 6.75h16.5"
+                className="block h-6 w-6"
+                aria-hidden="true"
+              />
+            </svg>
+          </DisclosureButton>
+        </div>
 
-          {/* Logo (centered on mobile, left on desktop) */}
-          <div className="flex-1 flex items-center justify-start">
+        {/* Logo and Navigation Container */}
+        <div className="flex flex-1 items-center justify-between">
+          {/* Logo */}
+          <div className="flex-shrink-0 ml-0">
             <Link to="/">
-              <div className="flex-shrink-0 flex items-center">
-                <img className="h-12 w-auto" src={Logo} alt="Logo" />
-              </div>
+              <img className="w-26 h-auto" src={Logo} alt="Logo" />
             </Link>
           </div>
 
-          {/* Desktop Navigation (right side) */}
-          <div className="absolute right-0 hidden sm:flex sm:items-center sm:space-x-4">
-            <div className="flex space-x-3">
+          {/* Desktop Navigation - Adjusted for proper text alignment */}
+          <div className="hidden lg:flex lg:ml-20 lg:items-center lg:space-x-2">
+            <div className="flex space-x-2 md:space-x-2">
               {navigation.map((item) => (
                 <NavLink
                   key={item.name}
@@ -73,7 +72,7 @@ const Navbar1 = () => {
                       isActive
                         ? "bg-dark1 text-white"
                         : "text-dark2 border border-primary hover:bg-dark4 hover:text-white",
-                      "px-4 py-2 rounded-xl text-lg font-semibold transition-colors duration-500"
+                      "px-3 py-2 rounded-lg text-sm font-semibold transition-colors duration-500 flex items-center justify-center min-w-max" // Added flex alignment
                     )
                   }
                 >
@@ -81,16 +80,16 @@ const Navbar1 = () => {
                 </NavLink>
               ))}
             </div>
-            <button className="bg-primary w-[170px] h-[60px] text-blue-200 items-center justify-center px-6 py-1 rounded-xl text-lg font-semibold hover:bg-blue-700 transition-colors whitespace-nowrap">
+            <button className="bg-primary w-[100px] h-[40px] lg:w-[130px] lg:h-[45px] text-blue-200 items-center justify-center rounded-xl text-base lg:text-sm font-semibold hover:bg-blue-700 transition-colors whitespace-nowrap ml-2">
               <Link to="/contact">CONTACT US</Link>
             </button>
           </div>
         </div>
       </div>
 
-      {/* Mobile menu */}
-      <DisclosurePanel className="sm:hidden">
-        <div className="px-2 pt-2 pb-3 space-y-1">
+      {/* Mobile menu (unchanged) */}
+      <DisclosurePanel className="lg:hidden">
+        <div className="px-3 pt-2 pb-3 space-y-1">
           {navigation.map((item) => (
             <NavLink
               key={item.name}
@@ -100,7 +99,7 @@ const Navbar1 = () => {
                   isActive
                     ? "bg-dark1 text-white"
                     : "text-dark2 hover:bg-dark3 hover:text-white",
-                  "block px-3 py-2 rounded-md text-base font-medium"
+                  "block px-2 py-1 rounded-md text-sm font-medium"
                 )
               }
             >
@@ -111,8 +110,8 @@ const Navbar1 = () => {
             to="/contact"
             className={({ isActive }) =>
               classNames(
-                isActive ? "bg-blue-800" : "bg-primary hover:bg-blue-700",
-                "block px-3 py-2 rounded-md text-base font-medium text-white"
+                isActive ? "bg-blue-600" : "bg-primary hover:bg-blue-600",
+                "block px-3 py-2 rounded-md text-sm font-medium text-white"
               )
             }
           >

@@ -7,7 +7,7 @@ import Testimonial from "../sections/Testimonial";
 
 const MainLayout = ({ children }) => {
   return (
-    <div className="px-8 sm:pr-6">
+    <div className="">
       {/* <Navbar1 /> */}
       <Navbar1 />
       {/* <div className="h-16"></div> */}

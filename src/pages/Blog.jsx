@@ -3,6 +3,21 @@ import MainLayout from "../layout/MainLayout";
 import buttonIcon from "../assets/buttonIcon.png";
 import HeroImage from "../assets/Hero_Img.png";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import blog1 from "../assets/blog1.png";
+
+// Blog Content
+const Blogs = [
+  {
+    id: 1,
+    title: "LinkedIn networking tips for introverts",
+    image: blog1,
+    category: "Expert Advice",
+    published_date: "April 1, 2025",
+    reading_time: "5 Mins",
+    content:
+      "Networking doesn't have to be overwhelming especially for introverts. This guide shares practical, low-pressure ways to build meaningful professional relationships on LinkedIn through profile optimization, thoughtful content, and intentional engagement. Grow your network while staying true to your personality.",
+  },
+];
 
 const Blog = () => {
   return (
@@ -67,6 +82,52 @@ const Blog = () => {
                   organizers. Stay in the know with fresh content that helps you
                   grow personally and professionally..
                 </p>
+              </div>
+            </div>
+            {/* Blog Cards */}
+            <div className="mt-20">
+              {/* Card 1 */}
+              <div className="grid grid-cols-2 gap-6">
+                {/* Image */}
+                <div className="w-full h-auto rounded-lg">
+                  <img src={blog1} alt="blog" />
+                </div>
+                {/* Posts */}
+                <div className="bg-footer1 border-4 border-primary1 rounded-lg p-4 w-2xl">
+                  {/* Upper */}
+                  <div className="">
+                    <h3 className="font-bold text-xl">
+                      LinkedIn networking tips for introverts
+                    </h3>
+                    <div className="flex gap-6">
+                      <div className="bg-neutral1 rounded-xl p-1">
+                        <p className="text-sm">
+                          Category
+                          <span className="font-semibold text-sm">
+                            . Expert Advice
+                          </span>
+                        </p>
+                      </div>
+                      <div className="bg-neutral1 rounded-xl p-1">
+                        <p className="text-sm">
+                          Read
+                          <span className="font-semibold text-sm">.5 Mins</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  {/* Lower */}
+                  <div>
+                    <p className="text-sm">
+                      Networking doesn't have to be overwhelming especially for
+                      introverts. This guide shares practical, low-pressure ways
+                      to build meaningful professional relationships on LinkedIn
+                      through profile optimization, thoughtful content, and
+                      intentional engagement. Grow your network while staying
+                      true to your personality.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
