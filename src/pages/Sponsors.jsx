@@ -76,9 +76,9 @@ const Sponsors = () => {
     <div>
       <MainLayout>
         <div>
-          <section className="container mx-auto md:px-16 py-1 md:py-12">
+          <section className="">
             {/* Hero section */}
-            <div className="relative md:m-6 m-0 mt-6">
+            <div className="relative mx-auto w-[86%] mt-4">
               <div className="relative h-[400px] w-full justify-center items-center md:h-[657px] rounded-4xl overflow-hidden">
                 <div
                   className="absolute inset-0 bg-cover bg-center bg-dark1 opacity-95 bg-blend-soft-light"
@@ -117,14 +117,14 @@ const Sponsors = () => {
                 </div>
               </div>
             </div>
-            <div className="mt-10 md:mt-20">
+            <div className="mt-10 md:m-12">
               {/* Sponsors Contents */}
-              <div className="bg-primary w-[73px] h-8 items-center justify-center rounded-sm md:mt-30 mb-4">
+              <div className="bg-primary w-[73px] h-8 items-center justify-center rounded-sm md:mt-20 mb-4 m-5">
                 <button className="text-primary1 font-medium text-sm items-center justify-center p-1">
                   Sponsors
                 </button>
               </div>
-              <div>
+              <div className="m-5">
                 <h1 className="text-dark1 text-2xl md:text-4xl font-semibold">
                   Meet The Sponsors
                 </h1>
@@ -137,14 +137,14 @@ const Sponsors = () => {
                 </p>
               </div>
               {/* Sponsors */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pb-16">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:mt-20 md:m-10 m-5 pb-16">
                 {organizers.map((organizer, index) => (
                   <OrganizerCard key={index} organizer={organizer} />
                 ))}
               </div>
             </div>
             {/* Sponsors Content */}
-            <div className="mt-10">
+            <div className="mt-10 md:m-12 m-5">
               {/* Sponsor Contents */}
               <div className="bg-primary w-[73px] h-8 items-center justify-center rounded-sm md:mt-30 mb-4">
                 <button className="text-primary1 font-medium text-sm items-center justify-center p-1">

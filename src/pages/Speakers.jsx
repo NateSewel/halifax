@@ -177,9 +177,9 @@ const Speakers = () => {
     <div>
       <MainLayout>
         <div>
-          <section className="container mx-auto md:px-16 py-1 md:py-12">
+          <section className="">
             {/* Hero section */}
-            <div className="relative md:m-6 m-0 mt-6">
+            <div className="relative mx-auto w-[86%] mt-4">
               <div className="relative h-[400px] w-full justify-center items-center md:h-[657px] rounded-4xl overflow-hidden">
                 <div
                   className="absolute inset-0 bg-cover bg-center bg-dark1 opacity-95 bg-blend-soft-light"
@@ -218,14 +218,14 @@ const Speakers = () => {
                 </div>
               </div>
             </div>
-            <div className="mt-10 md:mt-20">
+            <div className="mt-10 md:m-12">
               {/* About Contents */}
-              <div className="bg-primary w-[73px] h-8 items-center justify-center rounded-sm md:mt-30 mb-4">
+              <div className="bg-primary w-[73px] h-8 items-center justify-center rounded-sm md:mt-20 mb-4 m-5">
                 <button className="text-primary1 font-medium text-sm items-center justify-center p-1">
                   Speakers
                 </button>
               </div>
-              <div>
+              <div className="m-5">
                 <h1 className="text-dark1 text-2xl md:text-4xl font-semibold">
                   Meet The Speakers
                 </h1>
@@ -236,7 +236,7 @@ const Speakers = () => {
                   advice to help you grow personally and professionally.
                 </p>
               </div>
-              <div className="md:mt-20 mt-10 pb-12">
+              <div className="md:mt-20 mt-10 pb-12 md:m-10 m-5">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pb-16">
                   {speakers.map((speaker, index) => (
                     <SpeakerCard key={index} speaker={speaker} />
@@ -256,7 +256,7 @@ const Speakers = () => {
                 </div>
               </div>
               {/* Speaker Content */}
-              <div className="mt-10">
+              <div className="mt-10 md:m-12 m-5">
                 {/* About Contents */}
                 <div className="bg-primary w-[73px] h-8 items-center justify-center rounded-sm md:mt-30 mb-4">
                   <button className="text-primary1 font-medium text-sm items-center justify-center p-1">
