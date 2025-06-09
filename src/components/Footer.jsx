@@ -108,7 +108,7 @@ const Footer = () => {
                 <ul className="space-y-2">
                   <li>
                     <a
-                      href="#"
+                      href="/"
                       className="text-gray-600 hover:text-linkedin transition-colors"
                     >
                       Home
@@ -116,7 +116,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href="#about"
+                      href="/about"
                       className="text-gray-600 hover:text-linkedin transition-colors"
                     >
                       About
@@ -132,7 +132,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href="#sponsors"
+                      href="/sponsors"
                       className="text-gray-600 hover:text-linkedin transition-colors"
                     >
                       Sponsors
@@ -145,7 +145,7 @@ const Footer = () => {
                 <ul className="space-y-2">
                   <li>
                     <a
-                      href="#become-sponsor"
+                      href="/become-a-sponsor"
                       className="text-gray-600 hover:text-linkedin transition-colors"
                     >
                       Become A Sponsor
@@ -153,7 +153,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href="#blog"
+                      href="/blog"
                       className="text-gray-600 hover:text-linkedin transition-colors"
                     >
                       Blog
@@ -161,7 +161,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href="#gallery"
+                      href="/gallery"
                       className="text-gray-600 hover:text-linkedin transition-colors"
                     >
                       Gallery
@@ -169,7 +169,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href="#contact"
+                      href="/contact"
                       className="text-gray-600 hover:text-linkedin transition-colors"
                     >
                       Contact Us

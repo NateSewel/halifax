@@ -11,6 +11,9 @@ import Blog from "./pages/Blog.jsx";
 import Gallery from "./pages/Gallery.jsx";
 import Contact from "./pages/Contact.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
+import SingleBlog from "./pages/SingleBlog.jsx";
+import blogs from "./data/blogs";
+import RelatedPosts from "./components/RelatedPosts.jsx";
 
 const router = createBrowserRouter([
   {
@@ -41,8 +44,16 @@ const router = createBrowserRouter([
     element: <BecomeASponsor />,
   },
   {
-    path: "/blog",
+    path: "/blogs",
     element: <Blog />,
+  },
+  {
+    path: "/blogs/:id",
+    element: <SingleBlog blogs={blogs} />,
+  },
+  {
+    path: "/blogs/related-blogs/:id",
+    element: <RelatedPosts blogs={blogs} />,
   },
   {
     path: "/gallery",
