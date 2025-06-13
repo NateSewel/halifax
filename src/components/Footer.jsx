@@ -124,7 +124,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href="#speakers"
+                      href="/speakers"
                       className="text-gray-600 hover:text-linkedin transition-colors"
                     >
                       Speakers
@@ -153,7 +153,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href="/blog"
+                      href="/blogs"
                       className="text-gray-600 hover:text-linkedin transition-colors"
                     >
                       Blog

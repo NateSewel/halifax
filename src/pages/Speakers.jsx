@@ -99,6 +99,18 @@ const speakers_2 = [
 
 const SpeakerCard = ({ speaker }) => (
   <div className=" bg-linear-to-b from-footer to-primary1 border-4 border-primary1 rounded-2xl shadow flex flex-col items-center text-center hover:shadow-lg transition-all w-full h-full p-8">
+    <img
+      src={speaker.img}
+      alt={speaker.name}
+      className="w-full h-full object-cover mb-2"
+    />
+
+    <h3 className="md:text-lg text-sm font-semibold text-gray-900">
+      {speaker.name}
+    </h3>
+    <p className="md:text-sm text-xs text-gray-600 mt-2 px-2">
+      {speaker.title}
+    </p>
     <div className="rounded-full p-3">
       <a href={speaker.linkedin} target="_blank" rel="noopener noreferrer">
         <img
@@ -110,67 +122,61 @@ const SpeakerCard = ({ speaker }) => (
         />
       </a>
     </div>
-    <div className="h-[190px] w-[250px] rounded-lg overflow-hidden mb-4">
-      <img
-        src={speaker.img}
-        alt={speaker.name}
-        className="w-full h-full object-cover"
-      />
-    </div>
-    <h3 className="text-lg font-semibold text-gray-900">{speaker.name}</h3>
-    <p className="text-sm text-gray-600 mt-2 px-2">{speaker.title}</p>
   </div>
 );
 
-const SpeakerCard2 = ({ speaker1 }) => (
-  <div className=" bg-linear-to-b from-footer to-primary1 border-4 border-primary1 rounded-2xl shadow flex flex-col items-center text-center hover:shadow-lg transition-all w-full h-full p-8">
-    <div className="rounded-full p-3">
-      <a href={speaker1.linkedin} target="_blank" rel="noopener noreferrer">
-        <img
-          src={Icon}
-          alt="LinkedIn Icon"
-          width={40}
-          height={40}
-          className="cursor-pointer hover:opacity-80 transition-opacity"
-        />
-      </a>
-    </div>
-    <div className="h-[190px] w-[250px] rounded-lg overflow-hidden mb-4">
-      <img
-        src={speaker1.img}
-        alt={speaker1.name}
-        className="w-full h-full object-cover"
-      />
-    </div>
-    <h3 className="text-lg font-semibold text-gray-900">{speaker1.name}</h3>
-    <p className="text-sm text-gray-600 mt-2 px-2">{speaker1.title}</p>
-  </div>
-);
+// const SpeakerCard2 = ({ speaker1 }) => (
+//   <div className=" bg-linear-to-b from-footer to-primary1 border-4 border-primary1 rounded-2xl shadow flex flex-col items-center text-center hover:shadow-lg transition-all w-full h-full p-8">
+//     <img
+//       src={speaker1.img}
+//       alt={speaker1.name}
+//       className="w-full h-full object-cover mb-2"
+//     />
 
-const SpeakerCard3 = ({ speaker2 }) => (
-  <div className=" bg-linear-to-b from-footer to-primary1 border-4 border-primary1 rounded-2xl shadow flex flex-col items-center text-center hover:shadow-lg transition-all w-full h-full p-8">
-    <div className="rounded-full p-3">
-      <a href={speaker2.linkedin} target="_blank" rel="noopener noreferrer">
-        <img
-          src={Icon}
-          alt="LinkedIn Icon"
-          width={40}
-          height={40}
-          className="cursor-pointer hover:opacity-80 transition-opacity"
-        />
-      </a>
-    </div>
-    <div className="h-[190px] w-[250px] rounded-lg overflow-hidden mb-4">
-      <img
-        src={speaker2.img}
-        alt={speaker2.name}
-        className="w-full h-full object-cover"
-      />
-    </div>
-    <h3 className="text-lg font-semibold text-gray-900">{speaker2.name}</h3>
-    <p className="text-sm text-gray-600 mt-2 px-2">{speaker2.title}</p>
-  </div>
-);
+//     <h3 className="md:text-lg text-sm font-semibold text-gray-900">
+//       {speaker1.name}
+//     </h3>
+//     <p className="md:text-sm text-xs text-gray-600 mt-2 px-2">
+//       {speaker1.title}
+//     </p>
+//     <div className="rounded-full p-3">
+//       <a href={speaker1.linkedin} target="_blank" rel="noopener noreferrer">
+//         <img
+//           src={Icon}
+//           alt="LinkedIn Icon"
+//           width={40}
+//           height={40}
+//           className="cursor-pointer hover:opacity-80 transition-opacity"
+//         />
+//       </a>
+//     </div>
+//   </div>
+// );
+
+// const SpeakerCard3 = ({ speaker2 }) => (
+//   <div className=" bg-linear-to-b from-footer to-primary1 border-4 border-primary1 rounded-2xl shadow flex flex-col items-center text-center hover:shadow-lg transition-all w-full h-full p-8">
+//     <div className="rounded-full p-3">
+//       <a href={speaker2.linkedin} target="_blank" rel="noopener noreferrer">
+//         <img
+//           src={Icon}
+//           alt="LinkedIn Icon"
+//           width={40}
+//           height={40}
+//           className="cursor-pointer hover:opacity-80 transition-opacity"
+//         />
+//       </a>
+//     </div>
+//     <div className="h-[190px] w-[250px] rounded-lg overflow-hidden mb-4">
+//       <img
+//         src={speaker2.img}
+//         alt={speaker2.name}
+//         className="w-full h-full object-cover"
+//       />
+//     </div>
+//     <h3 className="text-lg font-semibold text-gray-900">{speaker2.name}</h3>
+//     <p className="text-sm text-gray-600 mt-2 px-2">{speaker2.title}</p>
+//   </div>
+// );
 
 const Speakers = () => {
   return (
@@ -201,7 +207,7 @@ const Speakers = () => {
                         </p>
                         <div className="flex space-y-4 sm:space-x-4 sm:flex-row flex-col sm:space-y-0 pb-2">
                           <button className="bg-primary hover:bg-blue-700 text-xs md:text-sm cursor-pointer text-white md:px-6 md:py-3 p-3 w-36 md:w-42 rounded-lg flex items-center gap-3 transition-colors">
-                            BUY TICKET
+                            GET TICKET
                             <img
                               src={buttonIcon}
                               alt="icon"

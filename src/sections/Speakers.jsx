@@ -66,7 +66,15 @@ const speakers_1 = [
 
 const SpeakerCard = ({ speaker }) => (
   <div className=" bg-linear-to-b from-footer to-primary1 border-4 border-primary1 rounded-2xl shadow flex flex-col items-center text-center hover:shadow-lg transition-all w-full h-full p-8">
-    <div className="rounded-full p-3">
+    <img src={speaker.img} alt={speaker.name} className=" object-cover mb-2" />
+
+    <h3 className="md:text-lg text-sm font-semibold text-gray-900">
+      {speaker.name}
+    </h3>
+    <p className="md:text-sm text-xs text-gray-600 mt-2 px-2">
+      {speaker.title}
+    </p>
+    <div className="rounded-full">
       <a href={speaker.linkedin} target="_blank" rel="noopener noreferrer">
         <img
           src={Icon}
@@ -77,21 +85,20 @@ const SpeakerCard = ({ speaker }) => (
         />
       </a>
     </div>
-    <div className="h-[190px] w-[250px] rounded-lg overflow-hidden mb-4">
-      <img
-        src={speaker.img}
-        alt={speaker.name}
-        className="w-full h-full object-cover"
-      />
-    </div>
-    <h3 className="text-lg font-semibold text-gray-900">{speaker.name}</h3>
-    <p className="text-sm text-gray-600 mt-2 px-2">{speaker.title}</p>
   </div>
 );
 
 const SpeakerCard2 = ({ speaker1 }) => (
   <div className=" bg-linear-to-b from-footer to-primary1 border-4 border-primary1 rounded-2xl shadow flex flex-col items-center text-center hover:shadow-lg transition-all w-full h-full p-8">
-    <div className="rounded-full p-3">
+    <img src={speaker1.img} alt={speaker1.name} className="object-cover mb-2" />
+
+    <h3 className="md:text-lg text-sm font-semibold text-gray-900">
+      {speaker1.name}
+    </h3>
+    <p className="md:text-sm text-xs text-gray-600 mt-2 px-2">
+      {speaker1.title}
+    </p>
+    <div className="rounded-full">
       <a href={speaker1.linkedin} target="_blank" rel="noopener noreferrer">
         <img
           src={Icon}
@@ -102,15 +109,6 @@ const SpeakerCard2 = ({ speaker1 }) => (
         />
       </a>
     </div>
-    <div className="h-[190px] w-[250px] rounded-lg overflow-hidden mb-4">
-      <img
-        src={speaker1.img}
-        alt={speaker1.name}
-        className="w-full h-full object-cover"
-      />
-    </div>
-    <h3 className="text-lg font-semibold text-gray-900">{speaker1.name}</h3>
-    <p className="text-sm text-gray-600 mt-2 px-2">{speaker1.title}</p>
   </div>
 );
 const Speakers = () => {
@@ -147,10 +145,12 @@ const Speakers = () => {
 
       <div className="mt-4 md:mt-12">
         <div className="flex items-center justify-center">
-          <div className="flex-grow h-px bg-gray-400"></div>
-          <button className="mx-6 bg-primary hover:bg-blue-700 cursor-pointer px-4 py-1 text-primary1 md:px-6 md:py-2 rounded font-medium transition-colors duration-200">
-            View All Speakers
-          </button>
+          <div className="flex-grow h-px bg-gray-500"></div>
+          <a href="/speakers">
+            <button className="mx-6 bg-primary hover:bg-blue-700 cursor-pointer px-4 py-1 text-primary1 md:px-6 md:py-2 rounded font-medium transition-colors duration-200">
+              View All Speakers
+            </button>
+          </a>
           <div className="flex-grow h-px bg-gray-500"></div>
         </div>
       </div>

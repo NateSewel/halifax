@@ -3,6 +3,7 @@ import Image1 from "../assets/About1.png";
 import Image2 from "../assets/About2.png";
 import Image3 from "../assets/About3.png";
 import Image4 from "../assets/About4.png";
+import { Link } from "react-router";
 const About = () => {
   return (
     <div className="container mx-auto px-6 md:px-16 md:py-12">
@@ -82,10 +83,12 @@ const About = () => {
 
       <div className="mt-4 md:mt-12">
         <div className="flex items-center justify-center">
-          <div className="flex-grow h-px bg-gray-400"></div>
-          <button className="mx-6 bg-primary hover:bg-blue-700 cursor-pointer px-4 py-1 text-primary1 md:px-6 md:py-2 rounded font-medium transition-colors duration-200">
-            View More
-          </button>
+          <div className="flex-grow h-px bg-gray-500"></div>
+          <a href="/about">
+            <button className="mx-6 bg-primary hover:bg-blue-700 cursor-pointer px-4 py-1 text-primary1 md:px-6 md:py-2 rounded font-medium transition-colors duration-200">
+              View More
+            </button>
+          </a>
           <div className="flex-grow h-px bg-gray-500"></div>
         </div>
         {/* <div className="mt-10 flex items-center justify-center">

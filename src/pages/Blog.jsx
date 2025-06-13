@@ -37,7 +37,7 @@ const Blog = () => {
                         </p>
                         <div className="flex space-y-4 sm:space-x-4 sm:flex-row flex-col sm:space-y-0 pb-2">
                           <button className="bg-primary hover:bg-blue-700 text-xs md:text-sm cursor-pointer text-white md:px-6 md:py-3 p-3 w-36 md:w-42 rounded-lg flex items-center gap-3 transition-colors">
-                            BUY TICKET
+                            GET TICKET
                             <img
                               src={buttonIcon}
                               alt="icon"
@@ -125,14 +125,14 @@ const Blog = () => {
 
                   <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mt-6">
                     <div className="flex items-center gap-2">
-                      <Link to="/blogs/1">
+                      <a href="/blogs/1">
                         <button>
                           <GoArrowUpRight
                             size={43}
                             className="bg-primary hover:bg-blue-800 p-2 rounded-full border-6 cursor-pointer border-error-red1 text-primary1 font-bold"
                           />
                         </button>
-                      </Link>
+                      </a>
 
                       <p className="text-sm md:text-base">Read Full Blog</p>
                     </div>

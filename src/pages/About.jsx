@@ -30,14 +30,14 @@ const About = () => {
                     <div className="px-8 p-12 w-full md:m-30 md:pt-20">
                       <div className="max-w-3xl mx-auto md:mx-0">
                         <h1 className="text-text justify-center items-center md:max-w-md text-2xl md:text-5xl font-semibold mb-2 drop-shadow-lg space-y-4">
-                          About LinkedIn Local Lagos
+                          About LinkedIn Local Halifax
                         </h1>
                         <p className="text-text1 md:max-w-sm md:text-lg mb-8 font-semibold drop-shadow-lg">
                           Connecting Professionals, Building Communities.
                         </p>
                         <div className="flex space-y-4 sm:space-x-4 sm:flex-row flex-col sm:space-y-0 pb-2">
                           <button className="bg-primary hover:bg-blue-700 text-xs md:text-sm cursor-pointer text-white md:px-6 md:py-3 p-3 w-36 md:w-42 rounded-lg flex items-center gap-3 transition-colors">
-                            BUY TICKET
+                            GET TICKET
                             <img
                               src={buttonIcon}
                               alt="icon"

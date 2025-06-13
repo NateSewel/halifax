@@ -40,7 +40,7 @@ const blogs = [
   },
   {
     id: 4,
-    title: "What makes a great LinkedIn summary_",
+    title: "What makes a great LinkedIn summary.",
     image: blog3,
     category: "Expert Advice",
     published_date: "April 1, 2025",

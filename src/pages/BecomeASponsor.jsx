@@ -37,7 +37,7 @@ const BecomeASponsor = () => {
                         </p>
                         <div className="flex space-y-4 sm:space-x-4 sm:flex-row flex-col sm:space-y-0 pb-2">
                           <button className="bg-primary hover:bg-blue-700 text-xs md:text-sm cursor-pointer text-white md:px-6 md:py-3 p-3 w-36 md:w-42 rounded-lg flex items-center gap-3 transition-colors">
-                            BUY TICKET
+                            GET TICKET
                             <img
                               src={buttonIcon}
                               alt="icon"
@@ -56,12 +56,12 @@ const BecomeASponsor = () => {
             </div>
             <div className="mt-10 md:m-12">
               {/* Sponsors Contents */}
-              <div className="bg-primary w-[73px] h-8 items-center justify-center rounded-sm md:mt-20 mb-4 m-5">
+              {/* <div className="bg-primary w-[73px] h-8 items-center justify-center rounded-sm md:mt-20 mb-4 m-5">
                 <button className="text-primary1 font-medium text-sm items-center justify-center p-1">
                   Sponsors
                 </button>
-              </div>
-              <div className="m-5">
+              </div> */}
+              {/* <div className="m-5">
                 <h1 className="text-dark1 text-2xl md:text-4xl font-semibold">
                   Our Sponsor
                 </h1>
@@ -69,28 +69,28 @@ const BecomeASponsor = () => {
                   We’re currently partnering with forward-thinking brands and
                   businesses.
                 </p>
-              </div>
+              </div> */}
               {/* Sponsor Cards */}
               <div className="md:mt-20 mt-10 pb-12 md:m-10 m-5">
                 {/* card1 */}
-                <div>
+                {/* <div>
                   <img src={Card1} alt="Card" />
-                </div>
+                </div> */}
                 {/* card 2 */}
-                <div>
+                {/* <div>
                   <img src={Card2} alt="Card" />
-                </div>
+                </div> */}
                 {/* card 3 */}
-                <div>
+                {/* <div>
                   <img src={Card3} alt="Card" />
-                </div>
+                </div> */}
               </div>
               {/* Sponsors Content */}
               <div className="mt-10">
                 {/* Sponsor Contents */}
                 <div className="bg-primary w-[73px] h-8 items-center justify-center rounded-sm md:mt-20 mb-4 m-5">
                   <button className="text-primary1 font-medium text-sm items-center justify-center p-1">
-                    Speakers
+                    Sponsor
                   </button>
                 </div>
                 <div className="m-5">

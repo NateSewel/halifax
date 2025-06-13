@@ -2,15 +2,15 @@ import React from "react";
 import { useState, useEffect } from "react";
 import HeroImage from "../assets/Hero_Img.png";
 import buttonIcon from "../assets/buttonIcon.png";
-import logo1 from "../assets/Icons/Amazon.png";
-import logo2 from "../assets/Icons/Google.png";
+// import logo1 from "../assets/Icons/Amazon.png";
+// import logo2 from "../assets/Icons/Google.png";
 import logo3 from "../assets/Icons/TechSynergy.png";
-import logo4 from "../assets/Icons/Netflix.png";
-import logo5 from "../assets/Icons/WhatsApp.png";
-import logo6 from "../assets/Icons/Zoom.png";
-import logo7 from "../assets/Icons/Slack.png";
-import logo8 from "../assets/Icons/Dropbox.png";
-import logo9 from "../assets/Icons/Zapier.png";
+// import logo4 from "../assets/Icons/Netflix.png";
+// import logo5 from "../assets/Icons/WhatsApp.png";
+// import logo6 from "../assets/Icons/Zoom.png";
+// import logo7 from "../assets/Icons/Slack.png";
+// import logo8 from "../assets/Icons/Dropbox.png";
+// import logo9 from "../assets/Icons/Zapier.png";
 // Button icons
 import { FaLongArrowAltRight } from "react-icons/fa";
 // import { IoIosArrowDropdown } from "react-icons/io";
@@ -62,21 +62,23 @@ const CountdownTimer = () => {
 const SponsorLogos = () => {
   const [showAll, setShowAll] = useState(false);
   const sponsors = [
-    { name: "Amazon", logo: logo1 },
-    { name: "Google", logo: logo2 },
+    // { name: "Amazon", logo: logo1 },
+    // { name: "Google", logo: logo2 },
     { name: "Tech Synergy", logo: logo3 },
-    { name: "Netflix", logo: logo4 },
-    { name: "WhatsApp", logo: logo5 },
-    { name: "Zoom", logo: logo6 },
-    { name: "Slack", logo: logo7 },
-    { name: "Dropbox", logo: logo8 },
-    { name: "Zapier", logo: logo9 },
-    { name: "Amazon", logo: logo1 },
-    { name: "Google", logo: logo2 },
     { name: "Tech Synergy", logo: logo3 },
-    { name: "Netflix", logo: logo4 },
-    { name: "WhatsApp", logo: logo5 },
-    { name: "Zoom", logo: logo6 },
+    { name: "Tech Synergy", logo: logo3 },
+    // { name: "Netflix", logo: logo4 },
+    // { name: "WhatsApp", logo: logo5 },
+    // { name: "Zoom", logo: logo6 },
+    // { name: "Slack", logo: logo7 },
+    // { name: "Dropbox", logo: logo8 },
+    // { name: "Zapier", logo: logo9 },
+    // { name: "Amazon", logo: logo1 },
+    // { name: "Google", logo: logo2 },
+    // { name: "Tech Synergy", logo: logo3 },
+    // { name: "Netflix", logo: logo4 },
+    // { name: "WhatsApp", logo: logo5 },
+    // { name: "Zoom", logo: logo6 },
   ];
 
   // Show first 9 logos + button (replaces 10th logo)
@@ -89,7 +91,8 @@ const SponsorLogos = () => {
       </h3>
 
       {/* 5-column grid with integrated button */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-6">
+      {/* <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-6"> */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
         {/* First 9 logos */}
         {visibleSponsors.map((sponsor, idx) => (
           <div
@@ -180,7 +183,7 @@ const Hero = () => {
                   </p>
                   <div className="flex space-y-4 sm:space-x-4 sm:flex-row flex-col sm:space-y-0 pb-2">
                     <button className=" bg-primary hover:bg-blue-700 text-xs md:text-sm cursor-pointer text-white md:px-6 md:py-3 p-3 w-36 md:w-42 rounded-lg flex items-center gap-3 transition-colors">
-                      BUY TICKET
+                      GET TICKET
                       <img
                         src={buttonIcon}
                         alt="icon"

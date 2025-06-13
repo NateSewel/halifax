@@ -31,7 +31,7 @@ const blogs = [
   },
   {
     id: 4,
-    title: "What makes a great LinkedIn summary_",
+    title: "What makes a great LinkedIn summary.",
     image: blog4,
     category: "Expert Advice",
     published_date: "April 1, 2025",
@@ -85,14 +85,14 @@ const BlogCard = ({ blog }) => (
 
       {/* Read More button - centered and responsive */}
       <div className="flex justify-between items-center gap-1">
-        <Link to={`/blogs/${blog.id}`}>
+        <a href={`/blogs/${blog.id}`}>
           <button>
             <GoArrowUpRight
               size={43}
               className="bg-primary hover:bg-blue-800 p-2 rounded-full border-6 cursor-pointer border-error-red1 text-primary1 font-bold"
             />
           </button>
-        </Link>
+        </a>
         <p className="text-sm">Read Full Blog</p>
       </div>
     </div>
