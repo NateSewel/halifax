@@ -3,60 +3,80 @@ import { useState } from "react";
 import { Star } from "lucide-react";
 import { FaLongArrowAltLeft, FaLongArrowAltRight } from "react-icons/fa";
 import Icon from "../assets/Text.png";
-import Testimonial1 from "../assets/Testimonial1.png";
-import Testimonial2 from "../assets/Testimonial2.png";
-import Testimonial3 from "../assets/Testimonial3.png";
+import Testimonial1 from "../assets/Test1.jpeg";
+import Testimonial2 from "../assets/Test2.jpeg";
+import Testimonial3 from "../assets/Test3.jpeg";
+import Testimonial4 from "../assets/Test4.jpeg";
+import Testimonial5 from "../assets/Test5.jpeg";
+import Testimonial6 from "../assets/Test6.jpeg";
+import Testimonial7 from "../assets/Test7.jpeg";
+import Testimonial8 from "../assets/Test8.jpeg";
+
 // import vectorLeft from "../assets/VectorLeft.png";
 // import vectorRight from "../assets/VectorRight.png";
 
 const testimonials = [
   {
-    name: "Nicholous Deal",
+    name: "Siddharth Srivalsan",
     role: "Attendee",
     image: Testimonial1,
-    text: "LinkedIn Local Halifax provides an incredible, unparalleled opportunity to connect with local professionals in an engaging, supportive environment that brings real value to our community.",
-    rating: 5,
-  },
-  {
-    name: "Siddharth Srivalsan",
-    role: "Attendee",
-    image: Testimonial2,
-    text: "Attending the LinkedIn Local Halifax event at Saint Mary's University in 2024 was a spectacular opportunity. The energy in the room was profound, and I made connections that have already led to new business opportunities.",
+    text: "Attending the LinkedIn Local Halifax event at Saint Mary's University in 2024 was a spectacular opportunity. The energy in the room, the insightful conversations, and the genuine connections made it more than just a networking event.",
     rating: 5,
   },
   {
     name: "Nithin Jacob Eapen",
     role: "Attendee",
-    image: Testimonial3,
-    text: "LinkedIn Local Halifax was such a great event! I really enjoyed meeting people face-to-face and having real conversations that went beyond the typical networking. Looking forward to the next one!",
-    rating: 5,
-  },
-  {
-    name: "Maria Rodriguez",
-    role: "Attendee",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956",
-    text: "This event transformed how I approach professional networking. Instead of cold connections, I established meaningful relationships with professionals who share my values and vision.",
-    rating: 5,
-  },
-  {
-    name: "Siddharth Srivalsan",
-    role: "Attendee",
     image: Testimonial2,
-    text: "Attending the LinkedIn Local Halifax event at Saint Mary's University in 2024 was a spectacular opportunity. The energy in the room was profound, and I made connections that have already led to new business opportunities.",
+    text: "LinkedIn Local Halifax was such a great event! I really enjoyed meeting people face-to-face and having real conversations beyond just networking online. ",
     rating: 5,
   },
   {
-    name: "Nithin Jacob Eapen",
+    name: "Francesca Southwell",
     role: "Attendee",
     image: Testimonial3,
-    text: "LinkedIn Local Halifax was such a great event! I really enjoyed meeting people face-to-face and having real conversations that went beyond the typical networking. Looking forward to the next one!",
+    text: "Linkedin Local - Halifax truly lived up to its aim by providing a great platform for us students to listen to professionals in their field, ask questions, and ultimately network all while on campus.",
+    rating: 5,
+  },
+  {
+    name: "Nigel Lutchman ",
+    role: "Attendee",
+    image: Testimonial4,
+    text: "Attending LinkedIn Local Halifax at Saint Mary's was a refreshing and energizing experience. I loved the mix of authentic conversations, community connection, and the chance to meet inspiring professionals from across Halifax.",
+    rating: 5,
+  },
+  {
+    name: "Shivani Adhana",
+    role: "Attendee",
+    image: Testimonial5,
+    text: "I was truly honored to be a speaker at the LinkedIn Local Halifax event—an experience that was both enriching and inspiring. The event was exceptionally well-organized, creating an engaging and dynamic space for authentic networking and thought-provoking conversations.",
+    rating: 5,
+  },
+  {
+    name: "Jada Joseph",
+    role: "Attendee",
+    image: Testimonial6,
+    text: "Attending the LinkedIn Local event was a game-changer for me. Not only did I get to meet incredible professionals from a variety of industries, but I also connected with mentors who continue to support and guide me to this day.",
+    rating: 5,
+  },
+  {
+    name: "Basam Murtaza Tahoor",
+    role: "Attendee",
+    image: Testimonial7,
+    text: "LinkedIn Local Halifax was an excellent event that brought industry experts, business leaders, and professionals with varied backgrounds to form a dynamic platform for genuine connection and collaboration.",
+    rating: 5,
+  },
+  {
+    name: "Daniella Addo",
+    role: "Attendee",
+    image: Testimonial8,
+    text: "LinkedIn Local Halifax event was a great reminder that LinkedIn isn’t just for job searching but it’s also a powerful platform for building your personal brand, growing professionally, and making meaningful connections.",
     rating: 5,
   },
 ];
 
 const TestimonialCard = ({ name, role, image, text, rating }) => {
   return (
-    <div className="bg-footer1 border-4 border-primary1 rounded-2xl  p-6 h-full flex flex-col">
+    <div className="bg-neutral4 border-1 border-primary1 rounded-2xl  p-6 h-full flex flex-col">
       {/* Testimonial */}
       <div className="flex items-center mb-4 justify-between">
         {/* Image */}
@@ -156,7 +176,7 @@ const Testimonial = () => {
         ))}
       </div>
 
-      <div className="flex items-center justify-between p-1 mt-10 bg-footer1 border-4 border-primary1 rounded-lg">
+      <div className="flex items-center justify-between p-1 mt-10 bg-neutral4 border-1 border-primary1 rounded-lg">
         <p className="text-dark2 max-w-2xl md:text-sm font-semibold md:pl-3">
           We have 20+ Happy Attendees
         </p>

@@ -1,21 +1,30 @@
-import React from "react";
+import React, { useEffect } from "react";
 import MainLayout from "../layout/MainLayout";
 import buttonIcon from "../assets/buttonIcon.png";
 import HeroImage from "../assets/Hero_Img.png";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import Image3 from "../assets/BecomeSponsor.png";
-import Card1 from "../assets/SponsorCard1.png";
-import Card2 from "../assets/SponsorCard2.png";
-import Card3 from "../assets/SponsorCard1.png";
+// import Card1 from "../assets/SponsorCard1.png";
+// import Card2 from "../assets/SponsorCard2.png";
+// import Card3 from "../assets/SponsorCard1.png";
+
+// AOS
+import Aos from "aos";
+import "aos/dist/aos.css"; // Import AOS styles
 
 const BecomeASponsor = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 3000,
+    });
+  }, []);
   return (
     <div>
       <MainLayout>
         <div>
           <section>
             {/* Hero section */}
-            <div className="relative mx-auto w-[86%] mt-4">
+            <div className="relative mx-auto w-[86%] mt-4" data-aos="fade-up">
               <div className="relative h-[400px] w-full justify-center items-center md:h-[657px] rounded-4xl overflow-hidden">
                 <div
                   className="absolute inset-0 bg-cover bg-center bg-dark1 opacity-95 bg-blend-soft-light"
@@ -88,25 +97,27 @@ const BecomeASponsor = () => {
               {/* Sponsors Content */}
               <div className="mt-10">
                 {/* Sponsor Contents */}
-                <div className="bg-primary w-[73px] h-8 items-center justify-center rounded-sm md:mt-20 mb-4 m-5">
-                  <button className="text-primary1 font-medium text-sm items-center justify-center p-1">
-                    Sponsor
-                  </button>
-                </div>
-                <div className="m-5">
-                  <h1 className="text-dark1 text-2xl md:text-4xl font-semibold">
-                    Why Sponsor?
-                  </h1>
-                  <p className="text-dark2 md:text-lg md:max-w-7xl font-normal mt-3">
-                    Join us in creating an unforgettable experience for
-                    Halifax’s top professionals. Sponsoring LinkedIn Local
-                    Halifax puts your brand in front of an engaged, ambitious,
-                    and growing community of business leaders, creatives, and
-                    change-makers.
-                  </p>
+                <div data-aos="fade-up">
+                  <div className="bg-primary w-[73px] h-8 items-center justify-center rounded-sm md:mt-20 mb-4 m-5">
+                    <button className="text-primary1 font-medium text-sm items-center justify-center p-1">
+                      Sponsor
+                    </button>
+                  </div>
+                  <div className="m-5">
+                    <h1 className="text-dark1 text-2xl md:text-4xl font-semibold">
+                      Why Sponsor?
+                    </h1>
+                    <p className="text-dark2 md:text-lg md:max-w-7xl font-normal mt-3">
+                      Join us in creating an unforgettable experience for
+                      Halifax’s top professionals. Sponsoring LinkedIn Local
+                      Halifax puts your brand in front of an engaged, ambitious,
+                      and growing community of business leaders, creatives, and
+                      change-makers.
+                    </p>
+                  </div>
                 </div>
                 {/* Cards */}
-                <div className="mt-10 md:mt-20 md:m-5 m-2">
+                <div className="mt-10 md:mt-20 md:m-5 m-2" data-aos="fade-up">
                   <img src={Image3} alt="image" />
                 </div>
               </div>

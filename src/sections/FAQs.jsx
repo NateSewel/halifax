@@ -30,7 +30,7 @@ const FAQItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="bg-footer1 border-4 border-primary1 rounded-lg md:rounded-2xl mb-4 p-3 md:p-5">
+    <div className="bg-footer border-1 border-primary1 rounded-lg md:rounded-2xl mb-4 p-3 md:p-5">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex justify-between items-center w-full text-left font-medium text-dark2 focus:outline-none"
@@ -40,19 +40,19 @@ const FAQItem = ({ question, answer }) => {
           {isOpen ? (
             <FaMinus
               size={35}
-              className="bg-primary hover:bg-blue-800 p-2 rounded-full cursor-pointer border-4 border-error-red1"
+              className="bg-primary hover:bg-blue-800 p-2 rounded-full cursor-pointer border-4 border-pink-100"
             />
           ) : (
             <FaPlus
               size={35}
-              className="bg-primary hover:bg-blue-800 p-2 rounded-full border-4 cursor-pointer border-error-red1"
+              className="bg-primary hover:bg-blue-800 p-2 rounded-full border-4 cursor-pointer border-pink-100"
             />
           )}
         </div>
       </button>
 
       {isOpen && (
-        <div className="mt-1">
+        <div className="mt-1 bg-neutral3">
           <div className="flex-grow h-px md:w-[480px] bg-dark4 ml-3"></div>
           <p className="text-sm text-start font-medium text-dark4 p-4">
             {answer}
@@ -100,7 +100,7 @@ const FAQs = () => {
           ))}
         </div>
 
-        <div className="bg-footer1 border-4 border-primary1 rounded-lg md:rounded-2xl w-full md:w-[561px] md:h-[570px] md:mt-0 mt-8">
+        <div className="bg-neutral3 border-1 border-primary1 rounded-lg md:rounded-2xl w-full md:w-[561px] md:h-[570px] md:mt-0 mt-8">
           <div className="p-2 md:p-12">
             <h3 className="text-lg text-dark5 font-bold mb-4">
               ASK YOUR QUESTION
@@ -121,7 +121,7 @@ const FAQs = () => {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="Enter your name"
-                  className="w-full px-3 py-3 font-semibold bg-footer border-4 border-primary1 rounded-lg focus:outline-none focus:text-dark2 focus:font-semibold"
+                  className="w-full px-3 py-3 font-medium text-sm bg-neutral4 border-1 border-primary1 rounded-lg focus:outline-none focus:text-dark5 focus:font-normal"
                   required
                 />
               </div>
@@ -139,7 +139,7 @@ const FAQs = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email"
-                  className="w-full px-3 py-3 font-semibold bg-footer border-4 border-primary1 rounded-lg focus:outline-none focus:text-dark2 focus:font-semibold"
+                  className="w-full px-3 py-3 font-medium text-sm bg-neutral4 border-1 border-primary1 rounded-lg focus:outline-none focus:text-dark5 focus:font-normal"
                   required
                 />
               </div>
@@ -157,7 +157,7 @@ const FAQs = () => {
                   onChange={(e) => setQuestion(e.target.value)}
                   rows={4}
                   placeholder="Enter Your Question Here ....."
-                  className="w-full px-3 py-3 font-semibold bg-footer border-4 border-primary1 rounded-lg focus:outline-none focus:text-dark2 focus:font-semibold"
+                  className="w-full px-3 py-3 font-medium text-sm bg-neutral4 border-1 border-primary1 rounded-lg focus:outline-none focus:text-dark5 focus:font-normal"
                   required
                 ></textarea>
               </div>

@@ -10,20 +10,20 @@ const organizers = [
     name: "Jerome Nwoga",
     title: "Co-CEO of Peer Ledger",
     img: Organizer1,
-    linkedin: "https://www.linkedin.com/in/andrew-ray-2414b9173/",
+    linkedin: "https://www.linkedin.com/in/Jeromenwoga/",
   },
   {
     name: "Paul Williams",
     title: "Program Coordinator Halifax Partnership",
     img: Organizer2,
-    linkedin: "https://www.linkedin.com/in/andrew-ray-2414b9173/",
+    linkedin: "https://www.linkedin.com/in/Paulwilliams/",
   },
   {
-    name: "Fatima Akande",
+    name: "Fatimah Akande",
     title:
       "Executive Director, Equity and Engagement Division at Government of Nova Scotia",
     img: Organizer3,
-    linkedin: "https://www.linkedin.com/in/andrew-ray-2414b9173/",
+    linkedin: "https://www.linkedin.com/in/fatimah-akande/",
   },
   {
     name: "Ekow Nana",
@@ -34,7 +34,7 @@ const organizers = [
 ];
 
 const OrganizerCard = ({ organizer }) => (
-  <div className=" bg-linear-to-b from-footer to-primary1 border-4 border-primary1 rounded-2xl shadow flex flex-col items-center text-center hover:shadow-lg transition-all w-full h-full p-8">
+  <div className=" bg-linear-to-b from-neutral4 to-neutral3 border-1 border-primary1 rounded-2xl shadow flex flex-col items-center text-center hover:shadow-lg transition-all w-full h-full p-8">
     <img
       src={organizer.img}
       alt={organizer.name}

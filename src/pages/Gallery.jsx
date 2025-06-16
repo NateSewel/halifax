@@ -1,18 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import MainLayout from "../layout/MainLayout";
 import buttonIcon from "../assets/buttonIcon.png";
 import HeroImage from "../assets/Hero_Img.png";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import GalleryImages from "../assets/GalleryImages.png";
 import GalleryImages2 from "../assets/GalleryImages2.png";
+// AOS
+import Aos from "aos";
+import "aos/dist/aos.css"; // Import AOS styles
 
 const Gallery = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 3000,
+    });
+  }, []);
   return (
     <div>
       <MainLayout>
         <section>
           {/* Hero section (unchanged) */}
-          <div className="relative mx-auto w-[86%] mt-4">
+          <div className="relative mx-auto w-[86%] mt-4" data-aos="fade-up">
             <div className="relative h-[400px] w-full justify-center items-center md:h-[657px] rounded-4xl overflow-hidden">
               <div
                 className="absolute inset-0 bg-cover bg-center bg-dark1 opacity-95 bg-blend-soft-light"
@@ -54,25 +62,27 @@ const Gallery = () => {
           {/* Gallery Section */}
           <div className="mt-10 md:mt-20 md:mx-20">
             {/* About Contents */}
-            <div className="bg-primary w-[58px] h-8 items-center justify-center rounded-sm md:mt-20 mb-4 m-5">
-              <button className="text-primary1 font-medium text-sm items-center justify-center p-1">
-                Gallery
-              </button>
-            </div>
-            <div className="m-5">
-              <h1 className="text-dark1 text-2xl md:text-4xl font-semibold">
-                Halifax 1.0
-              </h1>
-              <p className="text-dark2 md:text-lg md:max-w-7xl font-normal mt-3">
-                LinkedIn LocalTM events are organic meetups, hosted by members
-                all over the world. They provide an opportunity to network,
-                build community, discuss industry trends, and share best
-                practices for using LinkedIn.
-              </p>
+            <div data-aos="fade-up">
+              <div className="bg-primary w-[58px] h-8 items-center justify-center rounded-sm md:mt-20 mb-4 m-5">
+                <button className="text-primary1 font-medium text-sm items-center justify-center p-1">
+                  Gallery
+                </button>
+              </div>
+              <div className="m-5">
+                <h1 className="text-dark1 text-2xl md:text-4xl font-semibold">
+                  Halifax 1.0
+                </h1>
+                <p className="text-dark2 md:text-lg md:max-w-7xl font-normal mt-3">
+                  LinkedIn LocalTM events are organic meetups, hosted by members
+                  all over the world. They provide an opportunity to network,
+                  build community, discuss industry trends, and share best
+                  practices for using LinkedIn.
+                </p>
+              </div>
             </div>
           </div>
           {/* Gallery */}
-          <div className="">
+          <div className="" data-aos="fade-up">
             <img
               src={GalleryImages}
               alt="blog"
@@ -80,7 +90,7 @@ const Gallery = () => {
             />
           </div>
           {/* Gallery Section */}
-          <div className="mt-10 md:mt-20 md:mx-20">
+          <div className="mt-10 md:mt-20 md:mx-20" data-aos="fade-up">
             {/* Gallery Contents */}
             <div className="bg-primary w-[58px] h-8 items-center justify-center rounded-sm md:mt-20 mb-4 m-5">
               <button className="text-primary1 font-medium text-sm items-center justify-center p-1">
@@ -100,7 +110,7 @@ const Gallery = () => {
             </div>
           </div>
           {/* Gallery 2 */}
-          <div className="">
+          <div className="" data-aos="fade-up">
             <img
               src={GalleryImages2}
               alt="blog"

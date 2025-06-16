@@ -6,6 +6,7 @@ import {
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Logo from "../assets/Logo.png";
 import { Link, NavLink } from "react-router-dom";
+import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
 
 const navigation = [
   { name: "HOME", href: "/" },
@@ -61,7 +62,7 @@ const Navbar1 = () => {
           </div>
 
           {/* Desktop Navigation - Adjusted for proper text alignment */}
-          <div className="hidden lg:flex lg:ml-20 lg:items-center lg:space-x-2">
+          <div className="hidden lg:flex lg:ml-12 lg:items-center lg:space-x-2">
             <div className="flex space-x-2 md:space-x-2">
               {navigation.map((item) => (
                 <NavLink
@@ -80,6 +81,9 @@ const Navbar1 = () => {
                 </NavLink>
               ))}
             </div>
+            {/* Toggle theme icon */}
+            <MdOutlineDarkMode className="text-2xl cursor-pointer hover:text-dark5" />
+
             <button className="bg-primary w-[100px] h-[40px] lg:w-[130px] lg:h-[45px] text-blue-200 items-center justify-center rounded-xl text-base lg:text-sm font-semibold hover:bg-blue-700 transition-colors whitespace-nowrap ml-2">
               <Link to="/contact">CONTACT US</Link>
             </button>
@@ -117,6 +121,8 @@ const Navbar1 = () => {
           >
             CONTACT US
           </NavLink>
+          {/* Toggle theme icon */}
+          <MdOutlineDarkMode className="text-3xl cursor-pointer pt-1" />
         </div>
       </DisclosurePanel>
     </Disclosure>

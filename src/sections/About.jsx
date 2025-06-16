@@ -23,10 +23,10 @@ const About = () => {
           the power of real, meaningful relationships.
         </p>
       </div>
-      <div className="mt-10 md:flex items-center md:flex-row border-4 border-primary1 rounded-2xl p-1 md:p-6  space-y-10 md:space-y-0 md:space-x-10">
+      <div className="mt-10 md:flex items-center md:flex-row border-1 border-primary1 bg-neutral4 rounded-2xl p-1 md:p-6  space-y-10 md:space-y-0 md:space-x-10">
         {/* Left side */}
         <div className="md:w-1/2 md:p-0 space-y-6 md:space-y-4 md:grid md:grid-flow-col md:grid-rows-3 gap-2">
-          <div className="bg-primary1 rounded-lg p-2 text-dark4 font-medium">
+          <div className="bg-neutral3 rounded-lg p-2 text-dark4 font-medium">
             <p>
               LinkedIn Local Halifax is all about bringing professionals
               together beyond just online connections. We’re a community of
@@ -34,7 +34,7 @@ const About = () => {
               in the power of real, meaningful connections.
             </p>
           </div>
-          <div className="bg-primary1 rounded-lg p-2 text-dark4 font-medium">
+          <div className="bg-neutral3 rounded-lg p-2 text-dark4 font-medium">
             <p>
               Our events go beyond traditional networking; they’re about sharing
               ideas, learning from each other, and discovering new
@@ -43,7 +43,7 @@ const About = () => {
               setting, you’re in the right place.
             </p>
           </div>
-          <div className="bg-primary1 rounded-lg p-2 text-dark4 font-medium">
+          <div className="bg-neutral3 rounded-lg p-2 text-dark4 font-medium">
             <p>
               At LinkedIn Local Halifax, we’re passionate about Connecting
               People, Ideas, and Opportunities. Come join us and be part of a

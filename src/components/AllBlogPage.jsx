@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 // import blog1 from "../assets/blog2.png";
 import blog2 from "../assets/blog2.png";
 import blog3 from "../assets/blog3.png";
@@ -7,6 +8,10 @@ import blog5 from "../assets/blog5.png";
 import blog6 from "../assets/blog6.png";
 import { GoArrowUpRight } from "react-icons/go";
 import { Link } from "react-router";
+
+// AOS
+import Aos from "aos";
+import "aos/dist/aos.css"; // Import AOS styles
 
 const blogs = [
   {
@@ -63,7 +68,7 @@ const blogs = [
 
 // Improved BlogCard component with responsive design
 const BlogCard = ({ blog }) => (
-  <div className="bg-footer1 border-4 border-primary1 rounded-2xl shadow flex flex-col items-center text-start hover:shadow-lg transition-all w-full h-full p-4">
+  <div className="bg-neutral3 border-1 border-primary1 rounded-2xl shadow flex flex-col items-center text-start hover:shadow-lg transition-all w-full h-full p-4">
     {/* Image container with responsive sizing */}
     <div className="w-full h-[180px] sm:h-[200px] md:h-[220px] lg:h-[240px] overflow-hidden mb-4">
       <img
@@ -100,9 +105,17 @@ const BlogCard = ({ blog }) => (
 );
 
 const AllBlogPage = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 3000,
+    });
+  }, []);
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+        data-aos="fade-up"
+      >
         {blogs.map((blog) => (
           <div key={blog.id} className="flex justify-center">
             <BlogCard blog={blog} />

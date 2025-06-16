@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import MainLayout from "../layout/MainLayout";
 import buttonIcon from "../assets/buttonIcon.png";
 import HeroImage from "../assets/Hero_Img.png";
@@ -14,6 +14,10 @@ import Speaker7 from "../../src/assets/Speaker7.png";
 import Speaker8 from "../../src/assets/Speaker8.png";
 import Speaker9 from "../../src/assets/Speaker9.png";
 import Image3 from "../assets/SpeakerCard.png";
+
+// AOS
+import Aos from "aos";
+import "aos/dist/aos.css"; // Import AOS styles
 
 const speakers = [
   {
@@ -98,7 +102,7 @@ const speakers_2 = [
 ];
 
 const SpeakerCard = ({ speaker }) => (
-  <div className=" bg-linear-to-b from-footer to-primary1 border-4 border-primary1 rounded-2xl shadow flex flex-col items-center text-center hover:shadow-lg transition-all w-full h-full p-8">
+  <div className=" bg-linear-to-b from-neutral4 to-neutral3 border-1 border-primary1 rounded-2xl shadow flex flex-col items-center text-center hover:shadow-lg transition-all w-full h-full p-8">
     <img
       src={speaker.img}
       alt={speaker.name}
@@ -179,13 +183,18 @@ const SpeakerCard = ({ speaker }) => (
 // );
 
 const Speakers = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 3000,
+    });
+  }, []);
   return (
     <div>
       <MainLayout>
         <div>
           <section className="">
             {/* Hero section */}
-            <div className="relative mx-auto w-[86%] mt-4">
+            <div className="relative mx-auto w-[86%] mt-4" data-aos="fade-up">
               <div className="relative h-[400px] w-full justify-center items-center md:h-[657px] rounded-4xl overflow-hidden">
                 <div
                   className="absolute inset-0 bg-cover bg-center bg-dark1 opacity-95 bg-blend-soft-light"
@@ -224,7 +233,7 @@ const Speakers = () => {
                 </div>
               </div>
             </div>
-            <div className="mt-10 md:m-12">
+            <div className="mt-10 md:m-12" data-aos="fade-up">
               {/* About Contents */}
               <div className="bg-primary w-[73px] h-8 items-center justify-center rounded-sm md:mt-20 mb-4 m-5">
                 <button className="text-primary1 font-medium text-sm items-center justify-center p-1">
@@ -242,7 +251,10 @@ const Speakers = () => {
                   advice to help you grow personally and professionally.
                 </p>
               </div>
-              <div className="md:mt-20 mt-10 pb-12 md:m-10 m-5">
+              <div
+                className="md:mt-20 mt-10 pb-12 md:m-10 m-5"
+                data-aos="fade-up"
+              >
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pb-16">
                   {speakers.map((speaker, index) => (
                     <SpeakerCard key={index} speaker={speaker} />
@@ -262,7 +274,7 @@ const Speakers = () => {
                 </div>
               </div>
               {/* Speaker Content */}
-              <div className="mt-10 md:m-12 m-5">
+              <div className="mt-10 md:m-12 m-5" data-aos="fade-up">
                 {/* About Contents */}
                 <div className="bg-primary w-[73px] h-8 items-center justify-center rounded-sm md:mt-30 mb-4">
                   <button className="text-primary1 font-medium text-sm items-center justify-center p-1">

@@ -30,7 +30,7 @@ const Footer = () => {
       </div>
 
       {/* Footer Section */}
-      <div className="bg-footer1 border-4 border-primary1 mt-12 rounded-2xl">
+      <div className="bg-neutral3 border-1 border-primary1 mt-12 rounded-2xl">
         <div className="px-6 md:px-12 py-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* Logo and Address */}
@@ -69,13 +69,17 @@ const Footer = () => {
               {/* Social Media Icons */}
               <div className="flex space-x-4 mt-6">
                 <a
-                  href="#"
+                  href="https://www.facebook.com/profile.php?id=61556356659781&mibextid=wwXIfr&mibextid=wwXIfr"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-600 hover:text-linkedin transition-colors"
                 >
                   <FaFacebook size={20} />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.instagram.com/linkedinlocalhalifax/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-600 hover:text-linkedin transition-colors"
                 >
                   <FaInstagram size={20} />
@@ -87,7 +91,9 @@ const Footer = () => {
                   <FaXTwitter size={20} />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/company/linkedinlocalhalifax/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-600 hover:text-linkedin transition-colors"
                 >
                   <FaLinkedin size={20} />

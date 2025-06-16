@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { GoArrowUpRight } from "react-icons/go";
 import blogs from "../data/blogs";
@@ -8,7 +8,16 @@ import socials from "../assets/Socials.png";
 import RelatedPosts from "../components/RelatedPosts";
 import MainLayout from "../layout/MainLayout";
 
+// AOS
+import Aos from "aos";
+import "aos/dist/aos.css"; // Import AOS styles
+
 const SingleBlog = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 3000,
+    });
+  }, []);
   const { id } = useParams();
   const blog = blogs.find((blog) => blog.id === parseInt(id));
 
@@ -20,7 +29,10 @@ const SingleBlog = () => {
     <>
       <MainLayout>
         <div className="m-4">
-          <div className="max-w-6xl mx-auto px-4 py-8 md:py-12 bg-primary1 mt-6 rounded-2xl">
+          <div
+            className="max-w-6xl mx-auto px-4 py-8 md:py-12 bg-neutral3 mt-6 rounded-2xl"
+            data-aos="fade-up"
+          >
             <div className="">
               {/* Heading */}
               <div className="relative mx-auto max-w-xl md:w[50%] md:p-6">
@@ -31,8 +43,11 @@ const SingleBlog = () => {
               <img src={blog.image} className="md:p-6 mt-1" />
             </div>
           </div>
-          <div className="max-w-6xl mx-auto px-4 py-8 md:py-12 bg-primary1 mt-10 md:mt-20 rounded-2xl">
-            <div className="relative mx-auto md:w-[60%]">
+          <div
+            className="max-w-6xl mx-auto px-4 py-8 md:py-12 bg-neutral3 mt-10 md:mt-20 rounded-2xl"
+            data-aos="fade-up"
+          >
+            <div className="relative mx-auto md:w-[60%]" data-aos="fade-up">
               <h1 className="text-dark3 md:text-3xl font-bold text-xl ">
                 Introduction
               </h1>

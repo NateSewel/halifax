@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import HeroImage from "../assets/Hero_Img.png";
+import HeroImage from "../assets/HeroImg1.webp";
 import buttonIcon from "../assets/buttonIcon.png";
 // import logo1 from "../assets/Icons/Amazon.png";
 // import logo2 from "../assets/Icons/Google.png";
@@ -37,7 +37,7 @@ const CountdownTimer = () => {
   }, []);
 
   return (
-    <div className="grid grid-cols-4 gap-2 mt-4 bg-footer1 border-4 border-white p-2">
+    <div className="grid grid-cols-4 gap-2 mt-4 bg-neutral3 border-4 border-white p-2">
       <div className="text-center">
         <div className="text-4xl font-bold">{timeLeft.days}</div>
         <div className="text-sm text-gray-600">Days</div>
@@ -165,7 +165,7 @@ const Hero = () => {
             className="absolute inset-0 bg-cover bg-center bg-dark1 opacity-95 bg-blend-soft-light"
             style={{
               backgroundImage: `url(${HeroImage})`,
-              backgroundColor: "#111111",
+              backgroundColor: "#333333",
               background: "cover",
               backgroundPosition: "center",
             }}
@@ -177,7 +177,7 @@ const Hero = () => {
                   <h1 className="text-text justify-center items-center md:max-w-xl text-2xl md:text-5xl font-semibold mb-2 drop-shadow-lg space-y-4">
                     Bringing LinkedIn Connections to Life in Halifax
                   </h1>
-                  <p className="text-text1 md:text-lg mb-8 font-semibold drop-shadow-lg">
+                  <p className="text-neutral1 md:text-lg mb-8 font-semibold drop-shadow-lg">
                     Join a vibrant community of professionals,
                     <br /> innovators, and leaders at LinkedIn Local Halifax
                   </p>
@@ -211,9 +211,7 @@ const Hero = () => {
       </div>
 
       {/* Sponsors section with 5x5 grid */}
-      <div className="mx-auto pt-0 mt-0 mb-12">
-        <SponsorLogos />
-      </div>
+      <div className="mx-auto pt-0 mt-0 mb-12">{/* <SponsorLogos /> */}</div>
     </section>
   );
 };

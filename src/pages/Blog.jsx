@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import MainLayout from "../layout/MainLayout";
 import buttonIcon from "../assets/buttonIcon.png";
 import HeroImage from "../assets/Hero_Img.png";
@@ -8,14 +8,23 @@ import AllBlogPage from "../components/AllBlogPage";
 import { GoArrowUpRight } from "react-icons/go";
 import { Link } from "react-router";
 
+// AOS
+import Aos from "aos";
+import "aos/dist/aos.css"; // Import AOS styles
+
 const Blog = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 3000,
+    });
+  }, []);
   return (
     <div>
       <MainLayout>
         <div>
           <section>
             {/* Hero section (unchanged) */}
-            <div className="relative mx-auto w-[86%] mt-4">
+            <div className="relative mx-auto w-[86%] mt-4" data-aos="fade-up">
               <div className="relative h-[400px] w-full justify-center items-center md:h-[657px] rounded-4xl overflow-hidden">
                 <div
                   className="absolute inset-0 bg-cover bg-center bg-dark1 opacity-95 bg-blend-soft-light"
@@ -57,7 +66,7 @@ const Blog = () => {
 
             <div className="">
               {/* Blog Content Section */}
-              <div className="mt-10 md:mt-20 md:m-10">
+              <div className="mt-10 md:mt-20 md:m-10" data-aos="fade-up">
                 <div className="bg-primary w-[48px] h-8 items-center justify-center rounded-sm md:mt-20 mb-4 m-5">
                   <button className="text-primary1 font-medium text-sm items-center justify-center p-1">
                     Blogs
@@ -79,7 +88,10 @@ const Blog = () => {
 
             {/* Featured Blog Card - Made Responsive */}
             <div className="mt-10 md:m-10">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 m-4 md:m-5 p-4 md:p-5">
+              <div
+                className="grid grid-cols-1 md:grid-cols-2 gap-6 m-4 md:m-5 p-4 md:p-5"
+                data-aos="fade-up"
+              >
                 {/* Image - Responsive sizing */}
                 <div className="w-full h-[200px] sm:h-[250px] md:h-[300px] lg:h-[350px] lg:w[422px] rounded-lg overflow-hidden">
                   <img
@@ -90,7 +102,7 @@ const Blog = () => {
                 </div>
 
                 {/* Content Card - Proper alignment */}
-                <div className="bg-footer1 border-4 border-primary1 rounded-lg p-4 md:p-6 flex flex-col justify-between">
+                <div className="bg-neutral3 border-1 border-primary1 rounded-lg p-4 md:p-6 flex flex-col justify-between">
                   <div>
                     <h3 className="font-bold text-xl md:text-2xl lg:text-3xl mb-3">
                       LinkedIn networking tips for introverts
@@ -129,7 +141,7 @@ const Blog = () => {
                         <button>
                           <GoArrowUpRight
                             size={43}
-                            className="bg-primary hover:bg-blue-800 p-2 rounded-full border-6 cursor-pointer border-error-red1 text-primary1 font-bold"
+                            className="bg-primary hover:bg-blue-800 p-2 rounded-full border-6 cursor-pointer border-pink-100 text-primary1 font-bold"
                           />
                         </button>
                       </a>

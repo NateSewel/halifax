@@ -14,26 +14,26 @@ const speakers = [
     name: "Dawn Jutla",
     title: "Co-CEO of Peer Ledger",
     img: Speaker1,
-    linkedin: "https://www.linkedin.com/in/andrew-ray-2414b9173/",
+    linkedin: "https://www.linkedin.com/in/dawnnjutla/",
   },
   {
     name: "Shivani Adhana",
     title: "Program Coordinator Halifax Partnership",
     img: Speaker2,
-    linkedin: "https://www.linkedin.com/in/andrew-ray-2414b9173/",
+    linkedin: "https://www.linkedin.com/in/Shivaniadhana/",
   },
   {
     name: "John Ariyo",
     title:
       "Executive Director, Equity and Engagement Division at Government of Nova Scotia",
     img: Speaker3,
-    linkedin: "https://www.linkedin.com/in/andrew-ray-2414b9173/",
+    linkedin: "https://www.linkedin.com/in/Johnariyo/",
   },
   {
     name: "Chandra Pottle",
     title: "Director of Attraction at Invest Nova Scotia",
     img: Speaker4,
-    linkedin: "https://www.linkedin.com/in/andrew-ray-2414b9173/",
+    linkedin: "https://www.linkedin.com/in/Chandrapottle/",
   },
 ];
 //Card 2
@@ -42,30 +42,30 @@ const speakers_1 = [
     name: "Andrew Ray",
     title: "Member Board of Governors - TRIUMF",
     img: Speaker5,
-    linkedin: "https://www.linkedin.com/in/andrew-ray-2414b9173/",
+    linkedin: "https://www.linkedin.com/in/Andrewray/",
   },
   {
     name: "Harry Madusha",
     title: "Lead Data Mining and Artificial Intelligence, Government of Canada",
     img: Speaker6,
-    linkedin: "https://www.linkedin.com/in/andrew-ray-2414b9173/",
+    linkedin: "https://www.linkedin.com/in/Harrymadusha/",
   },
   {
     name: "Nicholous Deal",
     title: "Assistant Professor at Mount Saint Vincent University",
     img: Speaker7,
-    linkedin: "https://www.linkedin.com/in/andrew-ray-2414b9173/",
+    linkedin: "https://www.linkedin.com/in/Nicholousdeal/",
   },
   {
     name: "Shelly Elsliger",
     title: "President Linked Express",
     img: Speaker8,
-    linkedin: "https://www.linkedin.com/in/andrew-ray-2414b9173/",
+    linkedin: "https://www.linkedin.com/in/selsliger/",
   },
 ];
 
 const SpeakerCard = ({ speaker }) => (
-  <div className=" bg-linear-to-b from-footer to-primary1 border-4 border-primary1 rounded-2xl shadow flex flex-col items-center text-center hover:shadow-lg transition-all w-full h-full p-8">
+  <div className=" bg-linear-to-b from-neutral4 to-neutral3 border-1 border-primary1 rounded-2xl shadow flex flex-col items-center text-center hover:shadow-lg transition-all w-full h-full p-8">
     <img src={speaker.img} alt={speaker.name} className=" object-cover mb-2" />
 
     <h3 className="md:text-lg text-sm font-semibold text-gray-900">
@@ -89,7 +89,7 @@ const SpeakerCard = ({ speaker }) => (
 );
 
 const SpeakerCard2 = ({ speaker1 }) => (
-  <div className=" bg-linear-to-b from-footer to-primary1 border-4 border-primary1 rounded-2xl shadow flex flex-col items-center text-center hover:shadow-lg transition-all w-full h-full p-8">
+  <div className=" bg-linear-to-b from-neutral4 to-neutral3 border-4 border-primary1 rounded-2xl shadow flex flex-col items-center text-center hover:shadow-lg transition-all w-full h-full p-8">
     <img src={speaker1.img} alt={speaker1.name} className="object-cover mb-2" />
 
     <h3 className="md:text-lg text-sm font-semibold text-gray-900">
