@@ -71,13 +71,15 @@ const Schedule = () => {
   return (
     <section className="container mx-auto px-4 sm:px-6 md:px-16 py-8 sm:py-12">
       <div className="bg-primary w-[85px] h-8 rounded-sm flex items-center justify-center mb-4">
-        <span className="text-primary1 p-3 font-medium text-sm">Schedule</span>
+        <span className="text-primary1 p-3 font-medium text-sm dark:text-text">
+          Schedule
+        </span>
       </div>
       <div className="mb-8 sm:mb-12">
-        <h1 className="text-dark1 text-xl sm:text-2xl md:text-4xl font-semibold mb-3">
+        <h1 className="text-dark1 text-xl sm:text-2xl md:text-4xl font-semibold mb-3 dark:text-text">
           Event Schedule
         </h1>
-        <p className="text-dark2 text-sm sm:text-base md:text-lg max-w-6xl font-normal">
+        <p className="text-dark2 text-sm sm:text-base md:text-lg max-w-6xl font-normal dark:text-text">
           From keynote speeches to interactive breakout sessions, we've curated
           an experience that's informative, inspiring, and filled with
           opportunities to connect.
@@ -90,15 +92,15 @@ const Schedule = () => {
         {/* Increased gap */}
         {/* Time Column - Hidden on mobile, shown on sm+ */}
         <div className="hidden sm:block w-full sm:w-[120px] md:w-[150px] lg:w-[180px] h-auto sticky top-24 self-start">
-          <h1 className="text-dark1 text-xl sm:text-2xl md:text-3xl font-bold mb-6">
+          <h1 className="text-dark1 text-xl sm:text-2xl md:text-3xl font-bold mb-6 dark:text-text">
             Time
           </h1>
           <div className="relative h-[400px]">
             <div
               className={`absolute transition-all duration-300 ${
                 activeIndex === 0
-                  ? "text-primary1 font-bold"
-                  : "text-dark2 font-semibold"
+                  ? "text-primary1 font-bold dark:text-text"
+                  : "text-dark2 font-semibold dark:text-text"
               }`}
             >
               {scheduleData[0].time.split(" ")[0]}
@@ -111,7 +113,7 @@ const Schedule = () => {
                 className={`absolute transition-all duration-300 ${
                   activeIndex === index + 1
                     ? "text-primary1 font-bold"
-                    : "text-dark2 font-semibold"
+                    : "text-dark2 font-semibold dark:text-text"
                 }`}
                 style={{ top: `${(index + 1) * 80}px` }}
               >
@@ -128,7 +130,7 @@ const Schedule = () => {
             <div
               key={index}
               ref={(el) => (scheduleItemsRef.current[index] = el)}
-              className="bg-neutral4 flex flex-col sm:flex-row w-full sm:w-auto sm:max-w-[810px] h-auto sm:h-[170px] border-1 sm:border-1 border-primary1 rounded-2xl"
+              className="bg-neutral4 flex flex-col sm:flex-row w-full sm:w-auto sm:max-w-[810px] h-auto sm:h-[170px] border-1 sm:border-1 border-primary1 rounded-2xl dark:border-neutral"
             >
               <img
                 src={ScheduleImg}
@@ -136,19 +138,19 @@ const Schedule = () => {
                 className="w-full sm:w-[120px] md:w-[220px] h-[120px] sm:h-full object-cover rounded-t-2xl sm:rounded-l-2xl sm:rounded-tr-none p-2 sm:p-3"
               />
               <div className="flex flex-col justify-start items-start p-4 sm:ml-4 md:ml-8 gap-1 sm:gap-2">
-                <p className="text-dark2 font-semibold sm:pl-0 md:pl-44 md:hidden">
+                <p className="text-dark2 font-semibold sm:pl-0 md:pl-44 md:hidden dark:text-text">
                   {item.time}
                 </p>
 
-                <p className="font-medium text-dark2 text-xs sm:text-sm">
+                <p className="font-medium text-dark2 text-xs sm:text-sm dark:text-text">
                   2025{" "}
                   <span className="font-extrabold text-xl sm:text-2xl">.</span>{" "}
                   <span>September 1st</span>
                 </p>
-                <h2 className="text-dark1 text-sm sm:text-md font-bold">
+                <h2 className="text-dark1 text-sm sm:text-md font-bold dark:text-text">
                   {item.title}
                 </h2>
-                <p className="text-dark2 text-xs sm:text-sm">
+                <p className="text-dark2 text-xs sm:text-sm dark:text-text">
                   {item.description}
                 </p>
               </div>

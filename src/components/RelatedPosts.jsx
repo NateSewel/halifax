@@ -64,7 +64,7 @@ const blogs = [
 ];
 
 const RelatedPostsCard = ({ blog }) => (
-  <div className="bg-footer1 border-4 border-primary1 rounded-2xl shadow flex flex-col items-center text-start hover:shadow-lg transition-all w-full h-full p-4">
+  <div className="bg-footer1 border-4 border-primary1 rounded-2xl shadow flex flex-col items-center text-start hover:shadow-lg transition-all w-full h-full p-4 dark:bg-linear-to-b dark:border-neutral dark:from-footer dark:to-neutral4">
     {/* Image container with responsive sizing */}
     <div className="w-full h-[180px] sm:h-[200px] md:h-[220px] lg:h-[240px] overflow-hidden mb-4">
       <img
@@ -77,12 +77,14 @@ const RelatedPostsCard = ({ blog }) => (
     {/* Content container with consistent padding */}
     <div className="w-full px-2 sm:px-4 flex flex-col items-start">
       {/* Title with responsive text sizing */}
-      <h3 className="flex items-start justify-start text-sm font-semibold text-dark2 mb-2 line-clamp-2">
+      <h3 className="flex items-start justify-start text-sm font-semibold text-dark2 mb-2 line-clamp-2 dark:text-white">
         {blog.title}
       </h3>
 
       {/* Content with proper alignment and responsive sizing */}
-      <p className="text-sm text-gray-600 mb-3 line-clamp-3">{blog.content}</p>
+      <p className="text-sm text-gray-600 mb-3 line-clamp-3 dark:text-text">
+        {blog.content}
+      </p>
 
       {/* Read More button - centered and responsive */}
       <div className="flex justify-between items-center gap-1">
@@ -90,11 +92,11 @@ const RelatedPostsCard = ({ blog }) => (
           <button>
             <GoArrowUpRight
               size={43}
-              className="bg-primary hover:bg-blue-800 p-2 rounded-full border-6 cursor-pointer border-error-red1 text-primary1 font-bold"
+              className="bg-primary hover:bg-blue-800 p-2 rounded-full border-6 cursor-pointer border-error-red1 text-primary1 font-bold dark:text-white"
             />
           </button>
         </a>
-        <p className="text-sm">Read Full Blog</p>
+        <p className="text-sm dark:text-text">Read Full Blog</p>
       </div>
     </div>
   </div>
@@ -120,15 +122,15 @@ const RelatedPosts = () => {
       <div className="mt-10">
         {/* Sponsor Contents */}
         <div className="bg-primary w-[47px] h-8 items-center justify-center rounded-sm md:mt-20 mb-4 m-5">
-          <button className="text-primary1 font-medium text-sm items-center justify-center p-1">
+          <button className="text-primary1 font-medium text-sm items-center justify-center p-1 dark:text-text">
             Blogs
           </button>
         </div>
         <div className="m-5">
-          <h1 className="text-dark1 text-xl md:text-3xl font-semibold">
+          <h1 className="text-dark1 text-xl md:text-3xl font-semibold dark:text-white">
             Related Blogs
           </h1>
-          <p className="text-dark2 md:text-lg md:max-w-7xl font-normal mt-3">
+          <p className="text-dark2 md:text-lg md:max-w-7xl font-normal mt-3 dark:text-text">
             Explore blog posts, event recaps, professional tips, and inspiring
             stories from our speakers, attendees, and organizers. Stay in the
             know with fresh content that helps you grow personally and
@@ -152,10 +154,13 @@ const RelatedPosts = () => {
           className={`p-2 rounded-full ${
             currentIndex === 0
               ? "opacity-50 cursor-not-allowed"
-              : "cursor-pointer hover:bg-gray-100 p-3 bg-primary1 border border-primary text-blue-400"
+              : "cursor-pointer hover:bg-gray-100 p-3 bg-primary1 border border-primary text-blue-400 dark:text-white"
           }`}
         >
-          <FaLongArrowAltLeft size={18} className="text-primary" />
+          <FaLongArrowAltLeft
+            size={18}
+            className="text-primary dark:text-white"
+          />
         </button>
 
         <button
@@ -167,7 +172,10 @@ const RelatedPosts = () => {
               : "p-3 bg-primary text-primary1 cursor-pointer hover:bg-blue-600"
           }`}
         >
-          <FaLongArrowAltRight size={18} className="text-primary1" />
+          <FaLongArrowAltRight
+            size={18}
+            className="text-primary1 dark:text-white"
+          />
         </button>
       </div>
     </div>

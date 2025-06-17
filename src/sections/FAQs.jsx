@@ -30,31 +30,33 @@ const FAQItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="bg-footer border-1 border-primary1 rounded-lg md:rounded-2xl mb-4 p-3 md:p-5">
+    <div className="bg-footer border-1 border-primary1 rounded-lg md:rounded-2xl mb-4 p-3 md:p-5 dark:border-neutral">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex justify-between items-center w-full text-left font-medium text-dark2 focus:outline-none"
       >
-        <span className="text-dark2 font-bold p-3">{question}</span>
-        <div className="bg-linkedin text-primary1 rounded-full p-3">
+        <span className="text-dark2 font-bold p-3 dark:text-text">
+          {question}
+        </span>
+        <div className="bg-linkedin text-primary1 rounded-full p-3 dark:text-text">
           {isOpen ? (
             <FaMinus
               size={35}
-              className="bg-primary hover:bg-blue-800 p-2 rounded-full cursor-pointer border-4 border-pink-100"
+              className="bg-primary hover:bg-blue-800 p-2 rounded-full cursor-pointer border-4 border-pink-100 dark:border-error-red1 dark:text-white"
             />
           ) : (
             <FaPlus
               size={35}
-              className="bg-primary hover:bg-blue-800 p-2 rounded-full border-4 cursor-pointer border-pink-100"
+              className="bg-primary hover:bg-blue-800 p-2 rounded-full border-4 cursor-pointer border-pink-100 dark:border-error-red1 dark:text-white"
             />
           )}
         </div>
       </button>
 
       {isOpen && (
-        <div className="mt-1 bg-neutral3">
+        <div className="mt-1 bg-neutral3 dark:bg-neutral dark:rounded-lg">
           <div className="flex-grow h-px md:w-[480px] bg-dark4 ml-3"></div>
-          <p className="text-sm text-start font-medium text-dark4 p-4">
+          <p className="text-sm text-start font-medium text-dark4 p-4 dark:text-white">
             {answer}
           </p>
         </div>
@@ -80,13 +82,15 @@ const FAQs = () => {
   return (
     <section className="container mx-auto px-6 md:px-16 py-12">
       <div className="bg-primary w-[50px] h-8 rounded-sm flex items-center justify-center mb-4">
-        <span className="text-primary1 p-3 font-medium text-sm">FAQs</span>
+        <span className="text-primary1 p-3 font-medium text-sm dark:text-text">
+          FAQs
+        </span>
       </div>
       <div className="mb-12">
-        <h1 className="text-dark1 text-2xl md:text-4xl font-semibold mb-3">
+        <h1 className="text-dark1 text-2xl md:text-4xl font-semibold mb-3 dark:text-white">
           Frequency Asked Questions
         </h1>
-        <p className="text-dark2 md:text-lg max-w-6xl font-normal">
+        <p className="text-dark2 md:text-lg max-w-6xl font-normal dark:text-text">
           Got Questions? We’ve Got Answers. Here are some of the most common
           questions about LinkedIn Local Halifax. If you need more info, don’t
           hesitate to reach out!
@@ -100,18 +104,18 @@ const FAQs = () => {
           ))}
         </div>
 
-        <div className="bg-neutral3 border-1 border-primary1 rounded-lg md:rounded-2xl w-full md:w-[561px] md:h-[570px] md:mt-0 mt-8">
+        <div className="bg-neutral3 border-1 border-primary1 rounded-lg md:rounded-2xl w-full md:w-[561px] md:h-[570px] md:mt-0 mt-8 dark:bg-footer1 dark:border-neutral">
           <div className="p-2 md:p-12">
-            <h3 className="text-lg text-dark5 font-bold mb-4">
+            <h3 className="text-lg text-dark5 font-bold mb-4 dark:text-text">
               ASK YOUR QUESTION
             </h3>
-            <div className="flex-grow h-px md:w-[450px] bg-dark4 m-5 ml-0"></div>
+            <div className="flex-grow h-px md:w-[450px] bg-dark4 m-5 ml-0 dark:bg-text"></div>
 
             <form onSubmit={handleSubmit}>
               <div className="mb-4">
                 <label
                   htmlFor="name"
-                  className="block text-xs font-medium text-dark4 mb-1"
+                  className="block text-xs font-medium text-dark4 mb-1 dark:text-text"
                 >
                   NAME
                 </label>
@@ -121,7 +125,7 @@ const FAQs = () => {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="Enter your name"
-                  className="w-full px-3 py-3 font-medium text-sm bg-neutral4 border-1 border-primary1 rounded-lg focus:outline-none focus:text-dark5 focus:font-normal"
+                  className="w-full px-3 py-3 font-medium text-sm bg-neutral4 border-1 border-primary1 rounded-lg focus:outline-none focus:text-dark5 focus:font-normal dark:text-text dark:focus:text-white dark:border-neutral"
                   required
                 />
               </div>
@@ -129,7 +133,7 @@ const FAQs = () => {
               <div className="mb-4">
                 <label
                   htmlFor="email"
-                  className="block text-xs font-medium text-dark4 mb-1"
+                  className="block text-xs font-medium text-dark4 mb-1 dark:text-text"
                 >
                   EMAIL
                 </label>
@@ -139,7 +143,7 @@ const FAQs = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email"
-                  className="w-full px-3 py-3 font-medium text-sm bg-neutral4 border-1 border-primary1 rounded-lg focus:outline-none focus:text-dark5 focus:font-normal"
+                  className="w-full px-3 py-3 font-medium text-sm bg-neutral4 border-1 border-primary1 rounded-lg focus:outline-none focus:text-dark5 focus:font-normal dark:text-text dark:focus:text-white dark:border-neutral"
                   required
                 />
               </div>
@@ -147,7 +151,7 @@ const FAQs = () => {
               <div className="mb-6">
                 <label
                   htmlFor="question"
-                  className="block text-xs font-medium text-dark4 mb-1"
+                  className="block text-xs font-medium text-dark4 mb-1 dark:text-text"
                 >
                   YOUR QUESTION
                 </label>
@@ -157,14 +161,14 @@ const FAQs = () => {
                   onChange={(e) => setQuestion(e.target.value)}
                   rows={4}
                   placeholder="Enter Your Question Here ....."
-                  className="w-full px-3 py-3 font-medium text-sm bg-neutral4 border-1 border-primary1 rounded-lg focus:outline-none focus:text-dark5 focus:font-normal"
+                  className="w-full px-3 py-3 font-medium text-sm bg-neutral4 border-1 border-primary1 rounded-lg focus:outline-none focus:text-dark5 focus:font-normal dark:text-text dark:focus:text-white dark:border-neutral"
                   required
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-primary hover:bg-blue-700 cursor-pointer rounded-lg text-white font-bold py-3"
+                className="w-full bg-primary hover:bg-blue-700 cursor-pointer rounded-lg text-white font-bold py-3 dark:text-white"
               >
                 SEND YOUR MESSAGE
               </button>

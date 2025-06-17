@@ -1,6 +1,6 @@
 const CallToAction = () => {
   return (
-    <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 bg-primary text-white">
+    <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 bg-primary text-white dark:text-white">
       <div className="md:w-3/4">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
           READY TO CONNECT WITH PROFESSIONALS IN HALIFAX
@@ -9,7 +9,7 @@ const CallToAction = () => {
           Join us as we make networking more personal, impactful, and rewarding.
           Stay connected and be part of LinkedIn Local Halifax!
         </p>
-        <button className="bg-white text-custom-primary hover:bg-gray-100 font-bold py-3 px-8 inline-flex items-center">
+        <button className="bg-white text-custom-primary hover:bg-gray-100 font-bold py-3 px-8 inline-flex items-center dark:text-white dark:bg-text">
           REGISTER NOW
           <svg
             className="ml-2 w-5 h-5"

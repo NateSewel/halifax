@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import MainLayout from "../layout/MainLayout";
 import buttonIcon from "../assets/buttonIcon.png";
-import HeroImage from "../assets/Hero_Img.png";
+import HeroImage from "../assets/HeroImg1.webp";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import Image3 from "../assets/BecomeSponsor.png";
 // import Card1 from "../assets/SponsorCard1.png";
@@ -30,7 +30,7 @@ const BecomeASponsor = () => {
                   className="absolute inset-0 bg-cover bg-center bg-dark1 opacity-95 bg-blend-soft-light"
                   style={{
                     backgroundImage: `url(${HeroImage})`,
-                    backgroundColor: "#111111",
+                    backgroundColor: "#222222",
                     background: "cover",
                     backgroundPosition: "center",
                   }}
@@ -38,10 +38,10 @@ const BecomeASponsor = () => {
                   <div className="relative h-full md:h-full flex items-center">
                     <div className="px-8 p-12 w-full md:m-30 md:pt-20">
                       <div className="max-w-3xl mx-auto md:mx-0">
-                        <h1 className="text-text justify-center items-center md:max-w-sm text-2xl md:text-5xl font-semibold mb-2 drop-shadow-lg space-y-4">
+                        <h1 className="text-text justify-center items-center md:max-w-sm text-2xl md:text-5xl font-semibold mb-2 drop-shadow-lg space-y-4 dark:text-white">
                           Become a Sponsor
                         </h1>
-                        <p className="text-text1 md:max-w-xs md:text-lg mb-8 font-semibold drop-shadow-lg">
+                        <p className="text-text1 md:max-w-xs md:text-lg mb-8 font-semibold drop-shadow-lg dark:text-text">
                           Partner with LinkedIn Local Lagos.
                         </p>
                         <div className="flex space-y-4 sm:space-x-4 sm:flex-row flex-col sm:space-y-0 pb-2">
@@ -98,27 +98,27 @@ const BecomeASponsor = () => {
               <div className="mt-10">
                 {/* Sponsor Contents */}
                 <div data-aos="fade-up">
-                  <div className="bg-primary w-[73px] h-8 items-center justify-center rounded-sm md:mt-20 mb-4 m-5">
-                    <button className="text-primary1 font-medium text-sm items-center justify-center p-1">
+                  <div className="bg-primary w-[65px] h-8 items-center justify-center rounded-sm md:mt-20 mb-4 m-5">
+                    <button className="text-primary1 font-medium text-sm items-center justify-center p-1 dark:text-text">
                       Sponsor
                     </button>
                   </div>
-                  <div className="m-5">
-                    <h1 className="text-dark1 text-2xl md:text-4xl font-semibold">
+                  <div className="m-5" data-aos="fade-up">
+                    <h1 className="text-dark1 text-2xl md:text-4xl font-semibold dark:text-white">
                       Why Sponsor?
                     </h1>
-                    <p className="text-dark2 md:text-lg md:max-w-7xl font-normal mt-3">
+                    <p className="text-dark2 md:text-lg md:max-w-7xl font-normal mt-3 dark:text-text">
                       Join us in creating an unforgettable experience for
                       Halifax’s top professionals. Sponsoring LinkedIn Local
                       Halifax puts your brand in front of an engaged, ambitious,
                       and growing community of business leaders, creatives, and
                       change-makers.
                     </p>
+                    {/* Cards */}
+                    <div className="mt-10 md:mt-20 md:m-5 m-2">
+                      <img src={Image3} alt="image" />
+                    </div>
                   </div>
-                </div>
-                {/* Cards */}
-                <div className="mt-10 md:mt-20 md:m-5 m-2" data-aos="fade-up">
-                  <img src={Image3} alt="image" />
                 </div>
               </div>
             </div>

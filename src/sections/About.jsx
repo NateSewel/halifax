@@ -7,26 +7,26 @@ import { Link } from "react-router";
 const About = () => {
   return (
     <div className="container mx-auto px-6 md:px-16 md:py-12">
-      <div className="bg-primary w-[73px] h-8 items-center justify-center rounded-sm mb-4">
-        <button className="text-primary1 font-medium text-sm items-center justify-center p-1">
+      <div className="bg-primary w-[70px] h-8 items-center justify-center rounded-sm mb-4">
+        <button className="text-primary1 font-medium text-sm items-center justify-center p-1 dark:text-text">
           About Us
         </button>
       </div>
       <div>
-        <h1 className="text-dark1 text-2xl md:text-4xl font-semibold">
+        <h1 className="text-dark1 text-2xl md:text-4xl font-semibold dark:text-text">
           More Than Just Networking, It’s a Movement
         </h1>
-        <p className="text-dark2 md:text-lg md:max-w-7xl font-normal mt-3">
+        <p className="text-dark2 md:text-lg md:max-w-7xl font-normal mt-3 dark:text-text">
           LinkedIn Local Halifax is all about bringing professionals together
           beyond just online connections. We’re a growing community of
           go-getters, innovators, and career-driven individuals who believe in
           the power of real, meaningful relationships.
         </p>
       </div>
-      <div className="mt-10 md:flex items-center md:flex-row border-1 border-primary1 bg-neutral4 rounded-2xl p-1 md:p-6  space-y-10 md:space-y-0 md:space-x-10">
+      <div className="mt-10 md:flex items-center md:flex-row border-1 border-primary1 bg-neutral4 rounded-2xl p-1 md:p-6  space-y-10 md:space-y-0 md:space-x-10 dark:border-neutral">
         {/* Left side */}
         <div className="md:w-1/2 md:p-0 space-y-6 md:space-y-4 md:grid md:grid-flow-col md:grid-rows-3 gap-2">
-          <div className="bg-neutral3 rounded-lg p-2 text-dark4 font-medium">
+          <div className="bg-neutral3 rounded-lg p-2 text-dark4 font-medium dark:text-text">
             <p>
               LinkedIn Local Halifax is all about bringing professionals
               together beyond just online connections. We’re a community of
@@ -34,7 +34,7 @@ const About = () => {
               in the power of real, meaningful connections.
             </p>
           </div>
-          <div className="bg-neutral3 rounded-lg p-2 text-dark4 font-medium">
+          <div className="bg-neutral3 rounded-lg p-2 text-dark4 font-medium dark:text-text">
             <p>
               Our events go beyond traditional networking; they’re about sharing
               ideas, learning from each other, and discovering new
@@ -43,7 +43,7 @@ const About = () => {
               setting, you’re in the right place.
             </p>
           </div>
-          <div className="bg-neutral3 rounded-lg p-2 text-dark4 font-medium">
+          <div className="bg-neutral3 rounded-lg p-2 text-dark4 font-medium dark:text-text">
             <p>
               At LinkedIn Local Halifax, we’re passionate about Connecting
               People, Ideas, and Opportunities. Come join us and be part of a
@@ -85,7 +85,7 @@ const About = () => {
         <div className="flex items-center justify-center">
           <div className="flex-grow h-px bg-gray-500"></div>
           <a href="/about">
-            <button className="mx-6 bg-primary hover:bg-blue-700 cursor-pointer px-4 py-1 text-primary1 md:px-6 md:py-2 rounded font-medium transition-colors duration-200">
+            <button className="mx-6 bg-primary hover:bg-blue-700 cursor-pointer px-4 py-1 text-primary1 md:px-6 md:py-2 rounded font-medium transition-colors duration-200 dark:text-text">
               View More
             </button>
           </a>

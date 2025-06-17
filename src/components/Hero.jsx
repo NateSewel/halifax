@@ -37,22 +37,22 @@ const CountdownTimer = () => {
   }, []);
 
   return (
-    <div className="grid grid-cols-4 gap-2 mt-4 bg-neutral3 border-4 border-white p-2">
+    <div className="grid grid-cols-4 gap-2 mt-4 bg-neutral3 border-4 border-white p-2 dark:border-footer1 dark:rounded-lg dark:text-white">
       <div className="text-center">
         <div className="text-4xl font-bold">{timeLeft.days}</div>
-        <div className="text-sm text-gray-600">Days</div>
+        <div className="text-sm text-gray-600 dark:text-text">Days</div>
       </div>
       <div className="text-center">
         <div className="text-4xl font-bold">{timeLeft.hours}</div>
-        <div className="text-sm text-gray-600">Hours</div>
+        <div className="text-sm text-gray-600 dark:text-text">Hours</div>
       </div>
       <div className="text-center">
         <div className="text-4xl font-bold">{timeLeft.minutes}</div>
-        <div className="text-sm text-gray-600">Minutes</div>
+        <div className="text-sm text-gray-600 dark:text-text">Minutes</div>
       </div>
       <div className="text-center">
         <div className="text-4xl font-bold">{timeLeft.seconds}</div>
-        <div className="text-sm text-gray-600">Seconds</div>
+        <div className="text-sm text-gray-600 dark:text-text">Seconds</div>
       </div>
     </div>
   );
@@ -165,7 +165,7 @@ const Hero = () => {
             className="absolute inset-0 bg-cover bg-center bg-dark1 opacity-95 bg-blend-soft-light"
             style={{
               backgroundImage: `url(${HeroImage})`,
-              backgroundColor: "#333333",
+              backgroundColor: "#222222",
               background: "cover",
               backgroundPosition: "center",
             }}
@@ -174,10 +174,10 @@ const Hero = () => {
             <div className="relative h-full md:h-full flex items-center">
               <div className="px-8 p-12 w-full  md:m-30 md:pt-20">
                 <div className="max-w-3xl mx-auto md:mx-0">
-                  <h1 className="text-text justify-center items-center md:max-w-xl text-2xl md:text-5xl font-semibold mb-2 drop-shadow-lg space-y-4">
+                  <h1 className="text-text justify-center items-center md:max-w-xl text-2xl md:text-5xl font-semibold mb-2 drop-shadow-lg space-y-4 dark:text-white">
                     Bringing LinkedIn Connections to Life in Halifax
                   </h1>
-                  <p className="text-neutral1 md:text-lg mb-8 font-semibold drop-shadow-lg">
+                  <p className="text-neutral1 md:text-lg mb-8 font-semibold drop-shadow-lg dark:text-text">
                     Join a vibrant community of professionals,
                     <br /> innovators, and leaders at LinkedIn Local Halifax
                   </p>
@@ -203,7 +203,7 @@ const Hero = () => {
 
         {/* Countdown box positioned at bottom-right */}
         <div className="md:absolute mt-2 md:right-3 sm:right-4 md:bottom-0 transform md:translate-x-4 md:translate-y-0 bg-footer p-8 md:p-6 rounded-tl-4xl w-[384px] h-[217px] max-w-xs">
-          <h2 className="md:text-4xl text-2xl font-bold text-gray-800">
+          <h2 className="md:text-4xl text-2xl font-bold text-gray-800 dark:text-text">
             We Are Getting Ready
           </h2>
           <CountdownTimer />

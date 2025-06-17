@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import MainLayout from "../layout/MainLayout";
 import buttonIcon from "../assets/buttonIcon.png";
-import HeroImage from "../assets/Hero_Img.png";
+import HeroImage from "../assets/HeroImg1.webp";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import blog1 from "../assets/blog1.png";
 import AllBlogPage from "../components/AllBlogPage";
@@ -30,7 +30,7 @@ const Blog = () => {
                   className="absolute inset-0 bg-cover bg-center bg-dark1 opacity-95 bg-blend-soft-light"
                   style={{
                     backgroundImage: `url(${HeroImage})`,
-                    backgroundColor: "#111111",
+                    backgroundColor: "#222222",
                     background: "cover",
                     backgroundPosition: "center",
                   }}
@@ -38,10 +38,10 @@ const Blog = () => {
                   <div className="relative h-full md:h-full flex items-center">
                     <div className="px-8 p-12 w-full md:m-30 md:pt-20">
                       <div className="max-w-3xl mx-auto md:mx-0">
-                        <h1 className="text-text justify-center items-center md:max-w-sm text-2xl md:text-5xl font-semibold mb-2 drop-shadow-lg space-y-4">
+                        <h1 className="text-text justify-center items-center md:max-w-sm text-2xl md:text-5xl font-semibold mb-2 drop-shadow-lg space-y-4 dark:text-white">
                           LinkedIn Local Blog
                         </h1>
-                        <p className="text-text1 md:max-w-xs md:text-lg mb-8 font-semibold drop-shadow-lg">
+                        <p className="text-text1 md:max-w-xs md:text-lg mb-8 font-semibold drop-shadow-lg dark:text-text">
                           Insights, Stories, and Inspiration.
                         </p>
                         <div className="flex space-y-4 sm:space-x-4 sm:flex-row flex-col sm:space-y-0 pb-2">
@@ -68,15 +68,15 @@ const Blog = () => {
               {/* Blog Content Section */}
               <div className="mt-10 md:mt-20 md:m-10" data-aos="fade-up">
                 <div className="bg-primary w-[48px] h-8 items-center justify-center rounded-sm md:mt-20 mb-4 m-5">
-                  <button className="text-primary1 font-medium text-sm items-center justify-center p-1">
+                  <button className="text-primary1 font-medium text-sm items-center justify-center p-1 dark:text-text">
                     Blogs
                   </button>
                 </div>
                 <div className="m-5">
-                  <h1 className="text-dark1 text-2xl md:text-4xl font-semibold">
+                  <h1 className="text-dark1 text-2xl md:text-4xl font-semibold dark:text-white">
                     Our Blogs
                   </h1>
-                  <p className="text-dark2 md:text-lg md:max-w-7xl font-normal mt-3">
+                  <p className="text-dark2 md:text-lg md:max-w-7xl font-normal mt-3 dark:text-text">
                     Explore blog posts, event recaps, professional tips, and
                     inspiring stories from our speakers, attendees, and
                     organizers. Stay in the know with fresh content that helps
@@ -102,14 +102,14 @@ const Blog = () => {
                 </div>
 
                 {/* Content Card - Proper alignment */}
-                <div className="bg-neutral3 border-1 border-primary1 rounded-lg p-4 md:p-6 flex flex-col justify-between">
+                <div className="bg-neutral3 border-1 border-primary1 rounded-lg p-4 md:p-6 flex flex-col justify-between dark:border-neutral">
                   <div>
-                    <h3 className="font-bold text-xl md:text-2xl lg:text-3xl mb-3">
+                    <h3 className="font-bold text-xl md:text-2xl lg:text-3xl mb-3 dark:text-white">
                       LinkedIn networking tips for introverts
                     </h3>
 
                     <div className="flex flex-wrap gap-2 mb-4">
-                      <div className="bg-neutral rounded-xl px-3 py-1">
+                      <div className="bg-neutral rounded-xl px-3 py-1 dark:bg-neutral dark:text-text">
                         <p className="text-xs md:text-sm">
                           Category
                           <span className="font-semibold">
@@ -118,14 +118,14 @@ const Blog = () => {
                           </span>
                         </p>
                       </div>
-                      <div className="bg-neutral rounded-xl px-3 py-1">
+                      <div className="bg-neutral rounded-xl px-3 py-1 dark:text-text">
                         <p className="text-xs md:text-sm">
                           Read<span className="font-semibold"> · 5 Mins</span>
                         </p>
                       </div>
                     </div>
 
-                    <p className="text-sm md:text-base mt-4 md:mt-6">
+                    <p className="text-sm md:text-base mt-4 md:mt-6 dark:text-text">
                       Networking doesn't have to be overwhelming especially for
                       introverts. This guide shares practical, low-pressure ways
                       to build meaningful professional relationships on LinkedIn
@@ -141,16 +141,18 @@ const Blog = () => {
                         <button>
                           <GoArrowUpRight
                             size={43}
-                            className="bg-primary hover:bg-blue-800 p-2 rounded-full border-6 cursor-pointer border-pink-100 text-primary1 font-bold"
+                            className="bg-primary hover:bg-blue-800 p-2 rounded-full border-6 cursor-pointer border-pink-100 text-primary1 font-bold dark:border-error-red1 dark:text-white"
                           />
                         </button>
                       </a>
 
-                      <p className="text-sm md:text-base">Read Full Blog</p>
+                      <p className="text-sm md:text-base dark:text-text">
+                        Read Full Blog
+                      </p>
                     </div>
-                    <p className="text-xs md:text-sm">
+                    <p className="text-xs md:text-sm dark:text-text">
                       Publication Date:{" "}
-                      <span className="text-dark1 font-semibold">
+                      <span className="text-dark1 font-semibold dark:text-text">
                         April 1, 2025
                       </span>
                     </p>

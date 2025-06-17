@@ -34,14 +34,14 @@ const organizers = [
 ];
 
 const OrganizerCard = ({ organizer }) => (
-  <div className=" bg-linear-to-b from-neutral4 to-neutral3 border-1 border-primary1 rounded-2xl shadow flex flex-col items-center text-center hover:shadow-lg transition-all w-full h-full p-8">
+  <div className=" bg-linear-to-b from-neutral4 to-neutral3 border-1 border-primary1 rounded-2xl shadow flex flex-col items-center text-center hover:shadow-lg transition-all w-full h-full p-8 dark:border-neutral dark:bg-linear-to-b dark:from-footer dark:to-neutral4">
     <img
       src={organizer.img}
       alt={organizer.name}
       className="w-full h-full object-cover overflow-hidden mb-2"
     />
 
-    <h3 className="md:text-lg text-sm font-semibold text-gray-900">
+    <h3 className="md:text-lg text-sm font-semibold text-gray-900 dark:text-white">
       {organizer.name}
     </h3>
     <div className="rounded-full p-3">
@@ -63,15 +63,15 @@ const Organizers = () => {
   return (
     <section className="container mx-auto px-6 md:px-16 py-12">
       <div className="bg-primary w-[85px] h-8 rounded-sm flex items-center justify-center mb-4">
-        <span className="text-primary1 p-3 font-medium text-sm">
+        <span className="text-primary1 p-3 font-medium text-sm dark:text-text">
           Organizers
         </span>
       </div>
       <div className="mb-12">
-        <h1 className="text-dark1 text-2xl md:text-4xl font-semibold mb-3">
+        <h1 className="text-dark1 text-2xl md:text-4xl font-semibold mb-3 dark:text-text">
           Meet The Organizers
         </h1>
-        <p className="text-dark2 md:text-lg max-w-6xl font-normal">
+        <p className="text-dark2 md:text-lg max-w-6xl font-normal dark:text-text">
           Our passionate team is made up of professionals dedicated to building
           a strong, supportive community in Halifax. Each event is powered by
           their vision, collaboration, and commitment to meaningful connections.
@@ -86,7 +86,7 @@ const Organizers = () => {
         <div className="flex items-center justify-center">
           <div className="flex-grow h-px bg-gray-500"></div>
           <a href="/sponsors">
-            <button className="mx-6 bg-primary hover:bg-blue-700 cursor-pointer px-4 py-1 text-primary1 md:px-6 md:py-2 rounded font-medium transition-colors duration-200">
+            <button className="mx-6 bg-primary hover:bg-blue-700 cursor-pointer px-4 py-1 text-primary1 md:px-6 md:py-2 rounded font-medium transition-colors duration-200 dark:text-text">
               View All Organizers
             </button>
           </a>

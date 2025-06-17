@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-primary: #036eb7;
   --color-primary1: #eef3f6;
@@ -27,6 +29,23 @@
   --body-font: "Inter", sans-serif;
 }
 
+/* Dark mode */
+.dark {
+  --color-primary: #3b82f6;
+  --color-primary1: #1e3a8a;
+  --color-neutral: #1e293b;
+  --color-neutral1: #334155;
+  --color-neutral2: #475569;
+  --color-neutral3: #262727;
+  --color-neutral4: #1a1b1b;
+  --color-footer: #010100;
+  --color-footer1: #262727;
+  --color-footer-text: #e2e8f0;
+  --color-text: #e9ebec;
+  --color-text1: #94a3b8;
+  --color-error-red1: #1e1f1e;
+}
+
 /* * {
   margin: 0;
   padding: 0;
@@ -36,6 +55,7 @@
 body {
   font-family: "Inter", sans-serif;
   background-color: var(--color-footer);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* ====================LAYOUT======================== */

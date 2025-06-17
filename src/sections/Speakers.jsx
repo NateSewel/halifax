@@ -65,13 +65,13 @@ const speakers_1 = [
 ];
 
 const SpeakerCard = ({ speaker }) => (
-  <div className=" bg-linear-to-b from-neutral4 to-neutral3 border-1 border-primary1 rounded-2xl shadow flex flex-col items-center text-center hover:shadow-lg transition-all w-full h-full p-8">
+  <div className=" bg-linear-to-b from-neutral4 to-neutral3 border-1 border-primary1 rounded-2xl shadow flex flex-col items-center text-center hover:shadow-lg transition-all w-full h-full p-8 dark:border-neutral dark:bg-linear-to-b dark:from-footer dark:to-neutral4">
     <img src={speaker.img} alt={speaker.name} className=" object-cover mb-2" />
 
-    <h3 className="md:text-lg text-sm font-semibold text-gray-900">
+    <h3 className="md:text-lg text-sm font-semibold text-gray-900 dark:text-white">
       {speaker.name}
     </h3>
-    <p className="md:text-sm text-xs text-gray-600 mt-2 px-2">
+    <p className="md:text-sm text-xs text-gray-600 mt-2 px-2 dark:text-text">
       {speaker.title}
     </p>
     <div className="rounded-full">
@@ -89,13 +89,13 @@ const SpeakerCard = ({ speaker }) => (
 );
 
 const SpeakerCard2 = ({ speaker1 }) => (
-  <div className=" bg-linear-to-b from-neutral4 to-neutral3 border-4 border-primary1 rounded-2xl shadow flex flex-col items-center text-center hover:shadow-lg transition-all w-full h-full p-8">
+  <div className=" bg-linear-to-b from-neutral4 to-neutral3 border-4 border-primary1 rounded-2xl shadow flex flex-col items-center text-center hover:shadow-lg transition-all w-full h-full p-8 dark:border-neutral dark:bg-linear-to-b dark:from-footer dark:to-neutral4">
     <img src={speaker1.img} alt={speaker1.name} className="object-cover mb-2" />
 
-    <h3 className="md:text-lg text-sm font-semibold text-gray-900">
+    <h3 className="md:text-lg text-sm font-semibold text-gray-900 dark:text-white">
       {speaker1.name}
     </h3>
-    <p className="md:text-sm text-xs text-gray-600 mt-2 px-2">
+    <p className="md:text-sm text-xs text-gray-600 mt-2 px-2 dark:text-text">
       {speaker1.title}
     </p>
     <div className="rounded-full">
@@ -115,14 +115,16 @@ const Speakers = () => {
   return (
     <section className="container mx-auto px-6 md:px-16 py-12">
       <div className="bg-primary w-[73px] h-8 rounded-sm flex items-center justify-center mb-4">
-        <span className="text-primary1 font-medium text-sm">Speakers</span>
+        <span className="text-primary1 font-medium text-sm dark:text-text">
+          Speakers
+        </span>
       </div>
 
       <div className="mb-12">
-        <h1 className="text-dark1 text-2xl md:text-4xl font-semibold mb-3">
+        <h1 className="text-dark1 text-2xl md:text-4xl font-semibold mb-3 dark:text-white">
           Meet The Speakers
         </h1>
-        <p className="text-dark2 md:text-lg max-w-6xl font-normal">
+        <p className="text-dark2 md:text-lg max-w-6xl font-normal dark:text-text">
           Get ready to hear from professionals who are shaping the future of
           work, leadership, and innovation. Our speakers bring real-world
           experience, fresh perspectives, and actionable advice to help you grow
@@ -147,7 +149,7 @@ const Speakers = () => {
         <div className="flex items-center justify-center">
           <div className="flex-grow h-px bg-gray-500"></div>
           <a href="/speakers">
-            <button className="mx-6 bg-primary hover:bg-blue-700 cursor-pointer px-4 py-1 text-primary1 md:px-6 md:py-2 rounded font-medium transition-colors duration-200">
+            <button className="mx-6 bg-primary hover:bg-blue-700 cursor-pointer px-4 py-1 text-primary1 md:px-6 md:py-2 rounded font-medium transition-colors duration-200 dark:text-text">
               View All Speakers
             </button>
           </a>

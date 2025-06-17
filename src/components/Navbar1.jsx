@@ -7,6 +7,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Logo from "../assets/Logo.png";
 import { Link, NavLink } from "react-router-dom";
 import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
+import DarkModeToggler from "./DarkModeToggler";
 
 const navigation = [
   { name: "HOME", href: "/" },
@@ -26,7 +27,7 @@ const Navbar1 = () => {
   return (
     <Disclosure
       as="nav"
-      className="bg-footer1 border-4 border-white mx-auto w-[86%] mt-4 shadow-md m-3 p-1 rounded-lg md:rounded-2xl md:p-2 lg:p-3"
+      className="bg-footer1 border-4 border-white mx-auto w-[86%] mt-4 shadow-md m-3 p-1 rounded-lg md:rounded-2xl md:p-2 lg:p-3 dark:text-text dark:border-footer1 dark:bg-neutral4"
     >
       <div className="px-6 lg:px-20">
         {/* Mobile menu button */}
@@ -73,7 +74,7 @@ const Navbar1 = () => {
                       isActive
                         ? "bg-dark1 text-white"
                         : "text-dark2 border border-primary hover:bg-dark4 hover:text-white",
-                      "px-3 py-2 rounded-lg text-sm font-semibold transition-colors duration-500 flex items-center justify-center min-w-max" // Added flex alignment
+                      "px-3 py-2 rounded-lg text-sm font-semibold transition-colors duration-500 flex items-center justify-center min-w-max dark:text-text dark:border-neutral4 dark:hover:bg-neutral3 dark:hover:text-white"
                     )
                   }
                 >
@@ -82,9 +83,9 @@ const Navbar1 = () => {
               ))}
             </div>
             {/* Toggle theme icon */}
-            <MdOutlineDarkMode className="text-2xl cursor-pointer hover:text-dark5" />
+            <DarkModeToggler />
 
-            <button className="bg-primary w-[100px] h-[40px] lg:w-[130px] lg:h-[45px] text-blue-200 items-center justify-center rounded-xl text-base lg:text-sm font-semibold hover:bg-blue-700 transition-colors whitespace-nowrap ml-2">
+            <button className="bg-primary w-[100px] h-[40px] lg:w-[130px] lg:h-[45px] text-text items-center justify-center rounded-xl text-base lg:text-sm font-semibold hover:bg-blue-700 transition-colors whitespace-nowrap ml-2 dark:text-white dark:border-neutral4 dark:hover:bg-neutral3 dark:hover:text-white">
               <Link to="/contact">CONTACT US</Link>
             </button>
           </div>
@@ -102,7 +103,7 @@ const Navbar1 = () => {
                 classNames(
                   isActive
                     ? "bg-dark1 text-white"
-                    : "text-dark2 hover:bg-dark3 hover:text-white",
+                    : "text-dark2 hover:bg-dark3 hover:text-white dark:text-text",
                   "block px-2 py-1 rounded-md text-sm font-medium"
                 )
               }
@@ -115,14 +116,14 @@ const Navbar1 = () => {
             className={({ isActive }) =>
               classNames(
                 isActive ? "bg-blue-600" : "bg-primary hover:bg-blue-600",
-                "block px-3 py-2 rounded-md text-sm font-medium text-white"
+                "block px-3 py-2 rounded-md text-sm font-medium text-white dark:text-white"
               )
             }
           >
             CONTACT US
           </NavLink>
           {/* Toggle theme icon */}
-          <MdOutlineDarkMode className="text-3xl cursor-pointer pt-1" />
+          <DarkModeToggler />
         </div>
       </DisclosurePanel>
     </Disclosure>

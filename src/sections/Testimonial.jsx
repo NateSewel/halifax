@@ -76,7 +76,7 @@ const testimonials = [
 
 const TestimonialCard = ({ name, role, image, text, rating }) => {
   return (
-    <div className="bg-neutral4 border-1 border-primary1 rounded-2xl  p-6 h-full flex flex-col">
+    <div className="bg-neutral4 border-1 border-primary1 rounded-2xl  p-6 h-full flex flex-col dark:border-neutral dark:border-4">
       {/* Testimonial */}
       <div className="flex items-center mb-4 justify-between">
         {/* Image */}
@@ -87,7 +87,7 @@ const TestimonialCard = ({ name, role, image, text, rating }) => {
             className="w-12 h-12 rounded-full object-cover"
           />
           <div className="ml-4">
-            <h3 className="font-semibold text-xs md:text-sm text-dark1">
+            <h3 className="font-semibold text-xs md:text-sm text-dark1 dark:text-white">
               {name}
             </h3>
             <p className="text-xs text-dark2">{role}</p>
@@ -99,7 +99,7 @@ const TestimonialCard = ({ name, role, image, text, rating }) => {
         </div>
       </div>
 
-      <p className="text-dark2 text-xs md:text-sm flex-grow">
+      <p className="text-dark2 text-xs md:text-sm flex-grow dark:text-text">
         {text}
         {/* <a href="#" className="text-linkedin hover:text-linkedin-dark ml-1">
           see more...
@@ -156,15 +156,15 @@ const Testimonial = () => {
   return (
     <section className="container mx-auto px-6 md:px-16 py-12">
       <div className="bg-primary w-[85px] h-8 rounded-sm flex items-center justify-center mb-4">
-        <span className="text-primary1 p-3 font-medium text-sm">
+        <span className="text-primary1 p-3 font-medium text-sm dark:text-text">
           Testimonial
         </span>
       </div>
       <div className="mb-12">
-        <h1 className="text-dark1 text-2xl md:text-4xl font-semibold mb-3">
+        <h1 className="text-dark1 text-2xl md:text-4xl font-semibold mb-3 dark:text-text">
           What Our Attendees Say
         </h1>
-        <p className="text-dark2 md:text-lg max-w-6xl font-normal">
+        <p className="text-dark2 md:text-lg max-w-6xl font-normal dark:text-text">
           Don’t just take our word for it, hear what past attendees have to say
           about their LinkedIn Local Halifax experience.
         </p>
@@ -176,8 +176,8 @@ const Testimonial = () => {
         ))}
       </div>
 
-      <div className="flex items-center justify-between p-1 mt-10 bg-neutral4 border-1 border-primary1 rounded-lg">
-        <p className="text-dark2 max-w-2xl md:text-sm font-semibold md:pl-3">
+      <div className="flex items-center justify-between p-1 mt-10 bg-neutral4 border-1 border-primary1 rounded-lg dark:border-neutral">
+        <p className="text-dark2 max-w-2xl md:text-sm font-semibold md:pl-3 dark:text-text">
           We have 20+ Happy Attendees
         </p>
 
@@ -187,16 +187,16 @@ const Testimonial = () => {
               variant="outline"
               size="icon"
               onClick={prevPage}
-              className="rounded-full p-3 bg-primary1 border border-primary text-blue-400 cursor-pointer"
+              className="rounded-full p-3 bg-primary1 border border-primary text-blue-400 cursor-pointer dark:text-text dark:border-neutral dark:bg-transparent"
             >
               <FaLongArrowAltLeft size={18} />
             </button>
-            <div className="md:mr-4 text-dark2 text-sm font-semibold p-3">
+            <div className="md:mr-4 text-dark2 text-sm font-semibold p-3 dark:text-text dark:bg-transparent dark:border dark:border-footer1 dark:rounded-2xl">
               {currentPage + 1}/{maxPages}
             </div>
             <button
               onClick={nextPage}
-              className="rounded-full p-3 bg-primary text-primary1 cursor-pointer hover:bg-blue-600"
+              className="rounded-full p-3 bg-primary text-primary1 cursor-pointer hover:bg-blue-600 dark:text-text"
             >
               <FaLongArrowAltRight size={18} />
             </button>

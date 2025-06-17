@@ -30,13 +30,13 @@ const SingleBlog = () => {
       <MainLayout>
         <div className="m-4">
           <div
-            className="max-w-6xl mx-auto px-4 py-8 md:py-12 bg-neutral3 mt-6 rounded-2xl"
+            className="max-w-6xl mx-auto px-4 py-8 md:py-12 bg-neutral3 mt-6 rounded-2xl dark:bg-footer1"
             data-aos="fade-up"
           >
             <div className="">
               {/* Heading */}
               <div className="relative mx-auto max-w-xl md:w[50%] md:p-6">
-                <h1 className="md:text-4xl text-xl font-bold text-dark2">
+                <h1 className="md:text-4xl text-xl font-bold text-dark2 dark:text-white">
                   {blog.title}
                 </h1>
               </div>
@@ -48,11 +48,11 @@ const SingleBlog = () => {
             data-aos="fade-up"
           >
             <div className="relative mx-auto md:w-[60%]" data-aos="fade-up">
-              <h1 className="text-dark3 md:text-3xl font-bold text-xl ">
+              <h1 className="text-dark3 md:text-3xl font-bold text-xl dark:text-white">
                 Introduction
               </h1>
-              <p className="mt-5 text-xs">{blog.content}</p>
-              <p className="mt-2 text-xs">
+              <p className="mt-5 text-xs dark:text-text">{blog.content}</p>
+              <p className="mt-2 text-xs dark:text-text">
                 Luckily, do you know LinkedIn provides a more structured and
                 less intimidating way to network with people? If you're an
                 introvert looking to expand your professional connections, this
@@ -60,16 +60,16 @@ const SingleBlog = () => {
                 too far outside your comfort zone.
               </p>
               <img src={blog.image} className="md:mt-10 mt-5" />
-              <div className="border-l-2 pl-1 border-dark2 mt-1">
-                <p className="text-xs">
-                  <span className="text-dark4 text-xs">
+              <div className="border-l-2 pl-1 border-dark2 mt-1 dark:border-white">
+                <p className="text-xs dark:text-text">
+                  <span className="text-dark4 text-xs dark:text-text">
                     Image caption: {""}{" "}
                   </span>
                   {blog.caption}
                 </p>
               </div>
               {/* h1 */}
-              <div className="mt-10">
+              <div className="mt-10 dark:text-text">
                 <h1 className="text-sm font-bold">
                   1. Optimize Your LinkedIn Profile
                 </h1>
@@ -85,7 +85,7 @@ const SingleBlog = () => {
                   professionals.
                 </p>
               </div>
-              <div>
+              <div className="dark:text-text">
                 <h1 className="text-sm font-bold mt-10">
                   Key Requirement For Profile Enhancements:
                 </h1>
@@ -148,7 +148,7 @@ const SingleBlog = () => {
                 </div>
               </div>
               {/* h2 */}
-              <div className="mt-10">
+              <div className="mt-10 dark:text-text">
                 <h1 className="text-sm font-bold">
                   2. Engage Through Thoughtful Content
                 </h1>
@@ -161,7 +161,7 @@ const SingleBlog = () => {
                   that you shared.
                 </p>
               </div>
-              <div>
+              <div className="dark:text-text">
                 <h1 className="text-sm font-bold mt-10">
                   Ways to Share Content:
                 </h1>
@@ -224,7 +224,7 @@ const SingleBlog = () => {
                 </div>
               </div>
               {/* h3 */}
-              <div className="mt-10">
+              <div className="mt-10 dark:text-text">
                 <h1 className="text-sm font-bold">
                   3. Connect with the Right People
                 </h1>
@@ -238,7 +238,7 @@ const SingleBlog = () => {
                   job opportunities, and business growth.
                 </p>
               </div>
-              <div>
+              <div className="dark:text-text">
                 <h1 className="text-sm font-bold mt-10">
                   Strategies for Building Connections:
                 </h1>
@@ -296,7 +296,7 @@ const SingleBlog = () => {
                 </div>
               </div>
               {/* h4 */}
-              <div className="mt-10">
+              <div className="mt-10 dark:text-text">
                 <h1 className="text-sm font-bold">
                   4. Master the Art of Meaningful Messaging
                 </h1>
@@ -308,7 +308,7 @@ const SingleBlog = () => {
                   professional space.
                 </p>
               </div>
-              <div>
+              <div className="dark:text-text">
                 <h1 className="text-sm font-bold mt-10">Best Practices:</h1>
                 {/* 1 */}
                 <div className="flex gap-4 mt-1 pb-1">
@@ -364,7 +364,7 @@ const SingleBlog = () => {
                 </div>
               </div>
               {/* h5 */}
-              <div className="mt-10">
+              <div className="mt-10 dark:text-text">
                 <h1 className="text-sm font-bold">
                   5. Leverage LinkedIn Events and Webinars
                 </h1>
@@ -375,7 +375,7 @@ const SingleBlog = () => {
                   people on this platform.
                 </p>
               </div>
-              <div>
+              <div className="dark:text-text">
                 <h1 className="text-sm font-bold mt-10">
                   How to Make the Most of LinkedIn Events:
                 </h1>
@@ -419,7 +419,7 @@ const SingleBlog = () => {
                 </div>
               </div>
               {/* h6 */}
-              <div className="mt-10">
+              <div className="mt-10 dark:text-text">
                 <h1 className="text-sm font-bold">
                   6. Use LinkedIn Features to Your Advantage
                 </h1>
@@ -428,7 +428,7 @@ const SingleBlog = () => {
                   more effectively without feeling overwhelmed.
                 </p>
               </div>
-              <div>
+              <div className="dark:text-text">
                 <h1 className="text-sm font-bold mt-10">
                   Features to Utilize:
                 </h1>
@@ -485,7 +485,7 @@ const SingleBlog = () => {
                 </div>
               </div>
               {/* h7 */}
-              <div className="mt-10">
+              <div className="mt-10 dark:text-text">
                 <h1 className="text-sm font-bold">
                   7. Set Boundaries and Network at Your Own Pace
                 </h1>
@@ -495,7 +495,7 @@ const SingleBlog = () => {
                   but make it strictly professional.
                 </p>
               </div>
-              <div>
+              <div className="dark:text-text">
                 <h1 className="text-sm font-bold mt-10">
                   Tips for Managing Networking Fatigue:
                 </h1>
@@ -550,10 +550,10 @@ const SingleBlog = () => {
                   </p>
                 </div>
               </div>
-              <h1 className="text-dark3 md:text-3xl font-bold text-xl mt-6 ">
+              <h1 className="text-dark3 md:text-3xl font-bold text-xl mt-6 dark:text-white">
                 Conclusion
               </h1>
-              <p className="mt-2 text-xs">
+              <p className="mt-2 text-xs dark:text-text">
                 Networking on LinkedIn as an introvert doesn't have to be
                 intimidating. You can comfortably expand your professional
                 network by optimizing your profile, engaging through content,
@@ -567,7 +567,7 @@ const SingleBlog = () => {
                 halifax, we provide tips for becoming a great LinkedIn user and
                 leveraging it for opportunities.
               </p>
-              <div className="mt-20">
+              <div className="mt-20 dark:text-text">
                 <p className="text-sm font-semibold">Share this post</p>
                 <img src={socials} width={90} className="cursor-pointer" />
               </div>

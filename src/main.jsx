@@ -14,6 +14,7 @@ import NotFoundPage from "./pages/NotFoundPage.jsx";
 import SingleBlog from "./pages/SingleBlog.jsx";
 import blogs from "./data/blogs";
 import RelatedPosts from "./components/RelatedPosts.jsx";
+import { ThemeProvider } from "./context/ThemeContext.jsx";
 
 const router = createBrowserRouter([
   {
@@ -67,6 +68,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <ThemeProvider>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </StrictMode>
 );

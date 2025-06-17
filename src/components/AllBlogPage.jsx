@@ -68,7 +68,7 @@ const blogs = [
 
 // Improved BlogCard component with responsive design
 const BlogCard = ({ blog }) => (
-  <div className="bg-neutral3 border-1 border-primary1 rounded-2xl shadow flex flex-col items-center text-start hover:shadow-lg transition-all w-full h-full p-4">
+  <div className="bg-neutral3 border-1 border-primary1 rounded-2xl shadow flex flex-col items-center text-start hover:shadow-lg transition-all w-full h-full p-4 dark:border-neutral dark:bg-linear-to-b  dark:from-footer dark:to-neutral4">
     {/* Image container with responsive sizing */}
     <div className="w-full h-[180px] sm:h-[200px] md:h-[220px] lg:h-[240px] overflow-hidden mb-4">
       <img
@@ -81,12 +81,14 @@ const BlogCard = ({ blog }) => (
     {/* Content container with consistent padding */}
     <div className="w-full px-2 sm:px-4 flex flex-col items-start">
       {/* Title with responsive text sizing */}
-      <h3 className="flex items-start justify-start text-sm font-semibold text-dark2 mb-2 line-clamp-2">
+      <h3 className="flex items-start justify-start text-sm font-semibold text-dark2 mb-2 line-clamp-2 dark:text-white">
         {blog.title}
       </h3>
 
       {/* Content with proper alignment and responsive sizing */}
-      <p className="text-sm text-gray-600 mb-3 line-clamp-3">{blog.content}</p>
+      <p className="text-sm text-gray-600 mb-3 line-clamp-3 dark:text-text">
+        {blog.content}
+      </p>
 
       {/* Read More button - centered and responsive */}
       <div className="flex justify-between items-center gap-1">
@@ -94,11 +96,11 @@ const BlogCard = ({ blog }) => (
           <button>
             <GoArrowUpRight
               size={43}
-              className="bg-primary hover:bg-blue-800 p-2 rounded-full border-6 cursor-pointer border-error-red1 text-primary1 font-bold"
+              className="bg-primary hover:bg-blue-800 p-2 rounded-full border-6 cursor-pointer border-pink-100 text-primary1 font-bold dark:border-error-red1 dark:text-white"
             />
           </button>
         </a>
-        <p className="text-sm">Read Full Blog</p>
+        <p className="text-sm dark:text-text">Read Full Blog</p>
       </div>
     </div>
   </div>

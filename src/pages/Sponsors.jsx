@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import MainLayout from "../layout/MainLayout";
 import buttonIcon from "../assets/buttonIcon.png";
-import HeroImage from "../assets/Hero_Img.png";
+import HeroImage from "../assets/HeroImg1.webp";
 import { FaLongArrowAltRight } from "react-icons/fa";
 
 import Organizer1 from "../assets/Organizer1.png";
@@ -51,14 +51,14 @@ const organizers = [
 ];
 
 const OrganizerCard = ({ organizer }) => (
-  <div className=" bg-linear-to-b from-neutral4 to-neutral3 border-1 border-primary1 rounded-2xl shadow flex flex-col items-center text-center hover:shadow-lg transition-all w-full h-full p-8">
+  <div className=" bg-linear-to-b from-neutral4 to-neutral3 border-1 border-primary1 rounded-2xl shadow flex flex-col items-center text-center hover:shadow-lg transition-all w-full h-full p-8 dark:bg-linear-to-b dark:border-neutral dark:from-footer dark:to-neutral4">
     <img
       src={organizer.img}
       alt={organizer.name}
       className="w-full h-full object-cover mb-2"
     />
 
-    <h3 className="md:text-lg text-sm font-semibold text-gray-900">
+    <h3 className="md:text-lg text-sm font-semibold text-gray-900 dark:text-text">
       {organizer.name}
     </h3>
     {/* <p className="md:text-sm text-xs text-gray-600 mt-2 px-2">
@@ -96,7 +96,7 @@ const Sponsors = () => {
                   className="absolute inset-0 bg-cover bg-center bg-dark1 opacity-95 bg-blend-soft-light"
                   style={{
                     backgroundImage: `url(${HeroImage})`,
-                    backgroundColor: "#111111",
+                    backgroundColor: "#222222",
                     background: "cover",
                     backgroundPosition: "center",
                   }}
@@ -133,15 +133,15 @@ const Sponsors = () => {
               {/* Sponsors Contents */}
               <div data-aos="fade-up">
                 <div className="bg-primary w-[73px] h-8 items-center justify-center rounded-sm md:mt-20 mb-4 m-5">
-                  <button className="text-primary1 font-medium text-sm items-center justify-center p-1">
+                  <button className="text-primary1 font-medium text-sm items-center justify-center p-1 dark:text-text">
                     Sponsors
                   </button>
                 </div>
                 <div className="m-5">
-                  <h1 className="text-dark1 text-2xl md:text-4xl font-semibold">
+                  <h1 className="text-dark1 text-2xl md:text-4xl font-semibold dark:text-white">
                     Meet The Sponsors
                   </h1>
-                  <p className="text-dark2 md:text-lg md:max-w-7xl font-normal mt-3">
+                  <p className="text-dark2 md:text-lg md:max-w-7xl font-normal mt-3 dark:text-text">
                     LinkedIn Local Lagos 2.0 is made possible by the generous
                     support of our sponsors. Their commitment to professional
                     growth, networking, and community development helps us
@@ -149,15 +149,12 @@ const Sponsors = () => {
                     conversations.
                   </p>
                 </div>
-              </div>
-              {/* Sponsors */}
-              <div
-                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:mt-20 md:m-10 m-5 pb-16"
-                data-aos="fade-up"
-              >
-                {organizers.map((organizer, index) => (
-                  <OrganizerCard key={index} organizer={organizer} />
-                ))}
+                {/* Sponsors */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:mt-20 md:m-10 m-5 pb-16">
+                  {organizers.map((organizer, index) => (
+                    <OrganizerCard key={index} organizer={organizer} />
+                  ))}
+                </div>
               </div>
             </div>
             {/* Sponsors Content */}
@@ -165,25 +162,25 @@ const Sponsors = () => {
               {/* Sponsor Contents */}
               <div data-aos="fade-up">
                 <div className="bg-primary w-[73px] h-8 items-center justify-center rounded-sm md:mt-30 mb-4">
-                  <button className="text-primary1 font-medium text-sm items-center justify-center p-1">
+                  <button className="text-primary1 font-medium text-sm items-center justify-center p-1 dark:text-text">
                     Speakers
                   </button>
                 </div>
                 <div>
-                  <h1 className="text-dark1 text-2xl md:text-4xl font-semibold">
+                  <h1 className="text-dark1 text-2xl md:text-4xl font-semibold dark:text-white">
                     What to Expect
                   </h1>
-                  <p className="text-dark2 md:text-lg md:max-w-7xl font-normal mt-3">
+                  <p className="text-dark2 md:text-lg md:max-w-7xl font-normal mt-3 dark:text-text">
                     LinkedIn LocalTM events are organic meetups, hosted by
                     members all over the world. They provide an opportunity to
                     network, build community, discuss industry trends, and share
                     best practices for using LinkedIn.
                   </p>
                 </div>
-              </div>
-              {/* Cards */}
-              <div className="mt-10 md:mt-20" data-aos="fade-up">
-                <img src={Image3} alt="image" />
+                {/* Cards */}
+                <div className="mt-10 md:mt-20">
+                  <img src={Image3} alt="image" />
+                </div>
               </div>
             </div>
           </section>
