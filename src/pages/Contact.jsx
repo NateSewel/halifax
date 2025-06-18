@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState, useCallback, useRef } from "react";
 import MainLayout from "../layout/MainLayout";
 import { FaRegEnvelope } from "react-icons/fa6";
 import { BsTelephone } from "react-icons/bs";
@@ -56,18 +56,85 @@ const INITIAL_FORM_DATA = {
   message: "",
 };
 
+// Move FormField component outside to prevent re-creation on each render
+const FormField = React.memo(
+  ({
+    name,
+    label,
+    type = "text",
+    placeholder,
+    isTextarea = false,
+    icon,
+    value,
+    onChange,
+    error,
+  }) => (
+    <div>
+      <label
+        htmlFor={name}
+        className="block text-sm font-medium text-gray-700 dark:text-text mb-2"
+      >
+        {label}
+      </label>
+      <div className="relative">
+        {icon && (
+          <div className="absolute inset-y-0 left-0 pl-0 flex items-center pointer-events-none">
+            {icon}
+          </div>
+        )}
+        {isTextarea ? (
+          <textarea
+            id={name}
+            name={name}
+            rows={6}
+            value={value}
+            onChange={onChange}
+            placeholder={placeholder}
+            className={`w-full px-4 py-3 rounded-lg bg-blue-50 focus:outline-none resize-none ${
+              error ? "border-red-500" : "border-none"
+            }`}
+          />
+        ) : (
+          <input
+            type={type}
+            id={name}
+            name={name}
+            value={value}
+            onChange={onChange}
+            placeholder={placeholder}
+            className={`w-full ${
+              icon ? "pl-13" : "pl-4"
+            } pr-4 py-3 rounded-lg bg-blue-50 focus:outline-none transition-colors ${
+              error ? "border-red-500" : "border-none"
+            }`}
+          />
+        )}
+      </div>
+      {error && <p className="mt-1 text-sm text-red-600">{error}</p>}
+    </div>
+  )
+);
+
 export default function Contact() {
   const [formData, setFormData] = useState(INITIAL_FORM_DATA);
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState("");
 
+  const inputRefs = useRef({
+    firstName: null,
+    lastName: null,
+    email: null,
+    phone: null,
+    message: null,
+  });
+
   // Memoized validation function
   const validateForm = useCallback(() => {
     const newErrors = {};
 
     Object.keys(formData).forEach((field) => {
-      const value = formData[field].trim();
+      const value = formData[field]?.trim() || "";
       const rules = VALIDATION_RULES[field];
 
       if (!rules) return;
@@ -90,25 +157,28 @@ export default function Contact() {
     return newErrors;
   }, [formData]);
 
-  // Handle input changes
+  // Handle input changes - Fixed to ensure proper state updates
   const handleChange = useCallback(
     (e) => {
       const { name, value } = e.target;
-      setFormData((prev) => ({
-        ...prev,
+
+      // Update form data
+      setFormData((prevData) => ({
+        ...prevData,
         [name]: value,
       }));
 
-      // Clear error when user starts typing
+      // Clear error when typing
       if (errors[name]) {
-        setErrors((prev) => ({
-          ...prev,
+        setErrors((prevErrors) => ({
+          ...prevErrors,
           [name]: "",
         }));
       }
     },
     [errors]
   );
+
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -116,7 +186,6 @@ export default function Contact() {
     setSubmitStatus("");
 
     const validationErrors = validateForm();
-
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
       setIsSubmitting(false);
@@ -126,13 +195,9 @@ export default function Contact() {
     try {
       // Simulate API call
       await new Promise((resolve) => setTimeout(resolve, 2000));
-
-      // Success - you would replace this with actual API call
-      console.log("Form submitted:", formData);
       setSubmitStatus("success");
-
-      // Reset form
       setFormData(INITIAL_FORM_DATA);
+      setErrors({});
     } catch (error) {
       setSubmitStatus("error");
     } finally {
@@ -140,67 +205,12 @@ export default function Contact() {
     }
   };
 
-  // Form field component to reduce repetition
-  const FormField = ({
-    name,
-    label,
-    type = "text",
-    placeholder,
-    isTextarea = false,
-    icon,
-  }) => (
-    <div>
-      <label
-        htmlFor={name}
-        className="block text-sm font-medium text-gray-700 dark:text-text mb-2"
-      >
-        {label}
-      </label>
-      <div className="relative">
-        {icon && (
-          <div className="absolute inset-y-0 left-0 pl-0 flex items-center pointer-events-none">
-            {icon}
-          </div>
-        )}
-        {isTextarea ? (
-          <textarea
-            id={name}
-            name={name}
-            rows={6}
-            value={formData[name] || ""}
-            onChange={handleChange}
-            placeholder={placeholder}
-            className={`w-full px-4 py-3 rounded-lg bg-blue-50 focus:outline-none resize-none ${
-              errors[name] ? "border-red-500" : "border-none"
-            }`}
-          />
-        ) : (
-          <input
-            type={type}
-            id={name}
-            name={name}
-            value={formData[name] || ""}
-            onChange={handleChange}
-            placeholder={placeholder}
-            className={`w-full ${
-              icon ? "pl-13" : "pl-4"
-            } pr-4 py-3 rounded-lg bg-blue-50 focus:outline-none transition-colors ${
-              errors[name] ? "border-red-500" : "border-none"
-            }`}
-          />
-        )}
-      </div>
-      {errors[name] && (
-        <p className="mt-1 text-sm text-red-600">{errors[name]}</p>
-      )}
-    </div>
-  );
-
   useEffect(() => {
     Aos.init({
       duration: 3000,
     });
   }, []);
+
   return (
     <div>
       <MainLayout>
@@ -208,7 +218,7 @@ export default function Contact() {
           <div className="mt-20">
             {/* Sponsors Contents */}
             <div className="md:p-5 md:ml-15" data-aos="fade-up">
-              <div className="bg-primary w-[65px] h-8 items-center justify-center rounded-sm md:mt-20 mb-4 m-5">
+              <div className="bg-primary w-[62px] h-8 items-center justify-center rounded-sm md:mt-20 mb-4 m-5">
                 <button className="text-primary1 font-medium text-sm items-center justify-center p-1 dark:text-text">
                   Contact
                 </button>
@@ -218,8 +228,8 @@ export default function Contact() {
                   Contact Us
                 </h1>
                 <p className="text-dark2 md:text-lg md:max-w-7xl font-normal mt-3 dark:text-text">
-                  Have questions about LinkedIn Local Lagos 3.0? Interested in
-                  partnering with us or becoming a sponsor? We’d love to hear
+                  Have questions about LinkedIn Local Halifax 3.0? Interested in
+                  partnering with us or becoming a sponsor? We'd love to hear
                   from you!
                 </p>
               </div>
@@ -243,12 +253,18 @@ export default function Contact() {
                       label="First Name"
                       placeholder="Enter First Name"
                       icon={ICONS.firstName}
+                      value={formData.firstName}
+                      onChange={handleChange}
+                      error={errors.firstName}
                     />
                     <FormField
                       name="lastName"
                       label="Last Name"
                       placeholder="Enter Last Name"
-                      icon={ICONS.firstName} // Reusing the same icon
+                      icon={ICONS.firstName}
+                      value={formData.lastName}
+                      onChange={handleChange}
+                      error={errors.lastName}
                     />
                   </div>
 
@@ -260,6 +276,9 @@ export default function Contact() {
                       type="email"
                       placeholder="Enter your Email"
                       icon={ICONS.email}
+                      value={formData.email}
+                      onChange={handleChange}
+                      error={errors.email}
                     />
                     <FormField
                       name="phone"
@@ -267,6 +286,9 @@ export default function Contact() {
                       type="tel"
                       placeholder="Enter Phone Number"
                       icon={ICONS.phone}
+                      value={formData.phone}
+                      onChange={handleChange}
+                      error={errors.phone}
                     />
                   </div>
 
@@ -276,6 +298,9 @@ export default function Contact() {
                     label="Message"
                     placeholder="Enter your Message"
                     isTextarea={true}
+                    value={formData.message}
+                    onChange={handleChange}
+                    error={errors.message}
                   />
 
                   {/* Submit Button */}
@@ -350,7 +375,7 @@ export default function Contact() {
 }
 
 // Extracted sidebar component for better organization
-const ContactInfoSidebar = () => {
+const ContactInfoSidebar = React.memo(() => {
   const contactItems = [
     {
       icon: (
@@ -363,7 +388,7 @@ const ContactInfoSidebar = () => {
     {
       icon: (
         <div className="pl-0">
-          <img src={Telephone} alt="email icon" width={50} height={50} />
+          <img src={Telephone} alt="phone icon" width={50} height={50} />
         </div>
       ),
       text: "+91 00000 00000",
@@ -371,7 +396,7 @@ const ContactInfoSidebar = () => {
     {
       icon: (
         <div className="pl-0">
-          <img src={Gps} alt="email icon" width={50} height={50} />
+          <img src={Gps} alt="location icon" width={50} height={50} />
         </div>
       ),
       text: "Some where in the World",
@@ -421,4 +446,4 @@ const ContactInfoSidebar = () => {
       </div>
     </div>
   );
-};
+});
