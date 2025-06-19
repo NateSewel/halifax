@@ -203,7 +203,7 @@ const Footer = () => {
                 Privacy Policy
               </a>
               <a
-                href="#"
+                href="/terms-of-service"
                 className="text-gray-600 hover:text-linkedin transition-colors text-xs md:text-sm underline dark:text-text"
               >
                 Terms of Service

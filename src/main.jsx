@@ -15,6 +15,8 @@ import SingleBlog from "./pages/SingleBlog.jsx";
 import blogs from "./data/blogs";
 import RelatedPosts from "./components/RelatedPosts.jsx";
 import { ThemeProvider } from "./context/ThemeContext.jsx";
+import TermsOfServicePage from "./pages/TermsOfServicePage.jsx";
+// import PrivacyPolicyPage from "./pages/PrivacyPolicyPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -63,6 +65,16 @@ const router = createBrowserRouter([
   {
     path: "/contact",
     element: <Contact />,
+  },
+  {
+    path: "/terms-of-service",
+    element: <TermsOfServicePage />,
+    // children: [
+    //   {
+    //     path: "/privacy-policy",
+    //     // element: <PrivacyPolicyPage />,
+    //   },
+    // ],
   },
 ]);
 

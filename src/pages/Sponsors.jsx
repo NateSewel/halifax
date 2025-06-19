@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import MainLayout from "../layout/MainLayout";
-import buttonIcon from "../assets/buttonIcon.png";
+// import buttonIcon from "../assets/buttonIcon.png";
 import HeroImage from "../assets/HeroImg1.webp";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { IoIosArrowDropdown } from "react-icons/io";
