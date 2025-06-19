@@ -5,6 +5,7 @@ import HeroImage from "../assets/HeroImg1.webp";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import GalleryImages from "../assets/GalleryImages.png";
 import GalleryImages2 from "../assets/GalleryImages2.png";
+import Gallery1 from "../components/Gallery"; // Assuming you have a Gallery component for displaying images
 // AOS
 import Aos from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
@@ -81,41 +82,9 @@ const Gallery = () => {
               </div>
             </div>
           </div>
-          {/* Gallery */}
-          <div className="" data-aos="fade-up">
-            <img
-              src={GalleryImages}
-              alt="blog"
-              className="md:w-[86%] p-6 ml-0.5 md:ml-20 md:mt-2 object-cover"
-            />
-          </div>
           {/* Gallery Section */}
-          <div className="mt-10 md:mt-20 md:mx-20" data-aos="fade-up">
-            {/* Gallery Contents */}
-            <div className="bg-primary w-[58px] h-8 items-center justify-center rounded-sm md:mt-20 mb-4 m-5">
-              <button className="text-primary1 font-medium text-sm items-center justify-center p-1 dark:text-text">
-                Gallery
-              </button>
-            </div>
-            <div className="m-5">
-              <h1 className="text-dark1 text-2xl md:text-4xl font-semibold dark:text-white">
-                Halifax 2.0
-              </h1>
-              <p className="text-dark2 md:text-lg md:max-w-7xl font-normal mt-3 dark:text-text">
-                LinkedIn LocalTM events are organic meetups, hosted by members
-                all over the world. They provide an opportunity to network,
-                build community, discuss industry trends, and share best
-                practices for using LinkedIn.
-              </p>
-            </div>
-          </div>
-          {/* Gallery 2 */}
-          <div className="" data-aos="fade-up">
-            <img
-              src={GalleryImages2}
-              alt="blog"
-              className="md:w-[86%] p-6 ml-0.5 md:ml-20 md:mt-2 object-cover"
-            />
+          <div data-aos="fade-up">
+            <Gallery1 />
           </div>
         </section>
       </MainLayout>

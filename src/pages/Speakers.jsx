@@ -3,6 +3,7 @@ import MainLayout from "../layout/MainLayout";
 import buttonIcon from "../assets/buttonIcon.png";
 import HeroImage from "../assets/HeroImg1.webp";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import { IoIosArrowDropdown } from "react-icons/io";
 import Icon from "../assets/LinkedIcon.png";
 import Speaker1 from "../../src/assets/Speaker1.png";
 import Speaker2 from "../../src/assets/Speaker2.png";
@@ -18,6 +19,7 @@ import Image3 from "../assets/SpeakerCard.png";
 // AOS
 import Aos from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
+import { Link } from "react-router";
 
 const speakers = [
   {
@@ -192,9 +194,9 @@ const Speakers = () => {
     <div>
       <MainLayout>
         <div>
-          <section className="">
+          <section className="relative mx-auto md:w-[86%] mt-4">
             {/* Hero section */}
-            <div className="relative mx-auto w-[86%] mt-4" data-aos="fade-up">
+            <div className="" data-aos="fade-up">
               <div className="relative h-[400px] w-full justify-center items-center md:h-[657px] rounded-4xl overflow-hidden">
                 <div
                   className="absolute inset-0 bg-cover bg-center bg-dark1 opacity-95 bg-blend-soft-light"
@@ -214,18 +216,29 @@ const Speakers = () => {
                         <p className="text-text1 md:max-w-xs md:text-lg mb-8 font-semibold drop-shadow-lg">
                           Inspiring Voices, Meaningful Conversations.
                         </p>
-                        <div className="flex space-y-4 sm:space-x-4 sm:flex-row flex-col sm:space-y-0 pb-2">
-                          <button className="bg-primary hover:bg-blue-700 text-xs md:text-sm cursor-pointer text-white md:px-6 md:py-3 p-3 w-36 md:w-42 rounded-lg flex items-center gap-3 transition-colors">
-                            GET TICKET
-                            <img
-                              src={buttonIcon}
-                              alt="icon"
-                              className="brightness-0 invert"
-                            />
-                          </button>
-                          <button className="flex items-center justify-between text-xs md:text-sm gap-3 border border-text hover:bg-text1 hover:text-white cursor-pointer hover:bg-opacity-10 text-text md:px-6 md:py-3 p-3 w-36 md:w-42 rounded-lg transition-colors">
-                            CONTACT US <FaLongArrowAltRight />
-                          </button>
+                        <div className="flex flex-row space-x-4">
+                          {/* Button1 */}
+                          <div>
+                            <Link to="/">
+                              <button className=" bg-primary hover:bg-blue-700 text-xs md:text-sm cursor-pointer text-white md:px-3 md:py-3 px-2 py-3 rounded-lg flex items-center gap-3 transition-colors text-center">
+                                GET TICKET
+                                {/* <img
+                            src={buttonIcon}
+                            alt="icon"
+                            className="brightness-0 invert"
+                          /> */}
+                                <IoIosArrowDropdown className="text-xl rounded-lg font-bold" />
+                              </button>
+                            </Link>
+                          </div>
+                          {/* Button2 */}
+                          <div>
+                            <Link to="/contact">
+                              <button className="flex items-center text-center justify-between text-xs md:text-sm gap-3 border border-text hover:bg-text1 hover:text-white cursor-pointer hover:bg-opacity-10 text-text md:px-3 md:py-3 px-2 py-3 rounded-lg transition-colors">
+                                CONTACT US <FaLongArrowAltRight />
+                              </button>
+                            </Link>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -233,14 +246,14 @@ const Speakers = () => {
                 </div>
               </div>
             </div>
-            <div className="mt-10 md:m-12" data-aos="fade-up">
+            <div className="mt-10" data-aos="fade-up">
               {/* About Contents */}
-              <div className="bg-primary w-[73px] h-8 items-center justify-center rounded-sm md:mt-20 mb-4 m-5">
+              <div className="bg-primary w-[73px] h-8 items-center justify-center rounded-sm md:mt-20 mb-4">
                 <button className="text-primary1 font-medium text-sm items-center justify-center p-1 dark:text-text">
                   Speakers
                 </button>
               </div>
-              <div className="m-5">
+              <div>
                 <h1 className="text-dark1 text-2xl md:text-4xl font-semibold dark:text-white">
                   Meet The Speakers
                 </h1>
@@ -251,7 +264,7 @@ const Speakers = () => {
                   advice to help you grow personally and professionally.
                 </p>
               </div>
-              <div className="md:mt-20 mt-10 pb-12 md:m-10 m-5">
+              <div className="md:mt-20 mt-10 pb-12">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pb-16">
                   {speakers.map((speaker, index) => (
                     <SpeakerCard key={index} speaker={speaker} />
@@ -271,7 +284,7 @@ const Speakers = () => {
                 </div>
               </div>
               {/* Speaker Content */}
-              <div className="mt-10 md:m-12 m-5" data-aos="fade-up">
+              <div className="mt-10" data-aos="fade-up">
                 {/* About Contents */}
                 <div className="bg-primary w-[73px] h-8 items-center justify-center rounded-sm md:mt-30 mb-4">
                   <button className="text-primary1 font-medium text-sm items-center justify-center p-1 dark:text-text">

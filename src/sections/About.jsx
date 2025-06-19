@@ -6,7 +6,7 @@ import Image4 from "../assets/About4.png";
 import { Link } from "react-router";
 const About = () => {
   return (
-    <div className="container mx-auto px-6 md:px-16 md:py-12">
+    <div className="container mx-auto md:px-16 md:py-12">
       <div className="bg-primary w-[70px] h-8 items-center justify-center rounded-sm mb-4">
         <button className="text-primary1 font-medium text-sm items-center justify-center p-1 dark:text-text">
           About Us

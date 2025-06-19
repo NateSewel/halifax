@@ -28,7 +28,7 @@ const SingleBlog = () => {
   return (
     <>
       <MainLayout>
-        <div className="m-4">
+        <div>
           <div
             className="max-w-6xl mx-auto px-4 py-8 md:py-12 bg-neutral3 mt-6 rounded-2xl dark:bg-footer1"
             data-aos="fade-up"

@@ -61,7 +61,7 @@ const OrganizerCard = ({ organizer }) => (
 
 const Organizers = () => {
   return (
-    <section className="container mx-auto px-6 md:px-16 py-12">
+    <section className="container mx-auto md:px-16 py-12">
       <div className="bg-primary w-[85px] h-8 rounded-sm flex items-center justify-center mb-4">
         <span className="text-primary1 p-3 font-medium text-sm dark:text-text">
           Organizers

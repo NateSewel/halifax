@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback, useRef } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import MainLayout from "../layout/MainLayout";
 import { FaRegEnvelope } from "react-icons/fa6";
 import { BsTelephone } from "react-icons/bs";
@@ -121,13 +121,13 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState("");
 
-  const inputRefs = useRef({
-    firstName: null,
-    lastName: null,
-    email: null,
-    phone: null,
-    message: null,
-  });
+  // const inputRefs = useRef({
+  //   firstName: null,
+  //   lastName: null,
+  //   email: null,
+  //   phone: null,
+  //   message: null,
+  // });
 
   // Memoized validation function
   const validateForm = useCallback(() => {
@@ -214,16 +214,16 @@ export default function Contact() {
   return (
     <div>
       <MainLayout>
-        <section className="mx-auto mt-4">
+        <section className="relative mx-auto md:w-[86%] mt-4">
           <div className="mt-20">
             {/* Sponsors Contents */}
-            <div className="md:p-5 md:ml-15" data-aos="fade-up">
-              <div className="bg-primary w-[62px] h-8 items-center justify-center rounded-sm md:mt-20 mb-4 m-5">
+            <div className="" data-aos="fade-up">
+              <div className="bg-primary w-[62px] h-8 items-center justify-center rounded-sm md:mt-20 mb-4">
                 <button className="text-primary1 font-medium text-sm items-center justify-center p-1 dark:text-text">
                   Contact
                 </button>
               </div>
-              <div className="m-5">
+              <div className="md:mb-10">
                 <h1 className="text-dark1 text-2xl md:text-4xl font-semibold dark:text-white">
                   Contact Us
                 </h1>
@@ -236,14 +236,14 @@ export default function Contact() {
             </div>
           </div>
           {/* Contact form */}
-          <div className="grid m-3 lg:grid-cols-3 gap-12 md:p-5 md:ml-15 ">
+          <div className="grid mt-5 lg:grid-cols-3 gap-12">
             <div
               className="lg:col-span-2 bg-neutral3 border-3 border-primary1 rounded-lg md:rounded-2xl dark:bg-footer1 dark:border-neutral"
               data-aos="fade-up"
             >
               <form
                 onSubmit={handleSubmit}
-                className="bg-white rounded-xl shadow-sm p-8 text-sm dark:bg-footer1 dark:border-neutral"
+                className="bg-white rounded-xl shadow-sm md:p-8 p-3 text-sm dark:bg-footer1 dark:border-neutral"
               >
                 <div className="space-y-6">
                   {/* Name Fields Row */}

@@ -7,7 +7,7 @@ import { Link, NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <section className="container mx-auto px-4 md:px-16 py-4">
+    <section className="container mx-auto md:px-16 py-4">
       {/* CTA Section */}
       <div className="bg-primary rounded-xl px-6 md:px-12 py-8 md:py-12 ">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">

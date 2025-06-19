@@ -113,7 +113,7 @@ const SpeakerCard2 = ({ speaker1 }) => (
 );
 const Speakers = () => {
   return (
-    <section className="container mx-auto px-6 md:px-16 py-12">
+    <section className="container mx-auto md:px-16 py-12">
       <div className="bg-primary w-[73px] h-8 rounded-sm flex items-center justify-center mb-4">
         <span className="text-primary1 font-medium text-sm dark:text-text">
           Speakers

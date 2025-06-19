@@ -27,11 +27,11 @@ const Navbar1 = () => {
   return (
     <Disclosure
       as="nav"
-      className="bg-footer1 border-4 border-white mx-auto w-[86%] mt-4 shadow-md m-3 p-1 rounded-lg md:rounded-2xl md:p-2 lg:p-3 dark:text-text dark:border-footer1 dark:bg-neutral4"
+      className="bg-footer1 border-4 border-white mx-auto md:w-[90%] lg:w-[86%] mt-4 shadow-md m-3 p-1 rounded-lg md:rounded-2xl md:p-2 lg:p-3 dark:text-text dark:border-footer1 dark:bg-neutral4"
     >
-      <div className="px-6 lg:px-20">
+      <div className="px-6 md:px-20">
         {/* Mobile menu button */}
-        <div className="absolute right-9 flex items-center lg:hidden">
+        <div className="absolute right-9 md:right-16 flex items-center lg:hidden">
           <DisclosureButton className="inline-flex items-center justify-center p-1  rounded-md text-black hover:bg-gray-700 focus:outline-none">
             <span className="sr-only">Open main menu</span>
             <svg
@@ -63,7 +63,7 @@ const Navbar1 = () => {
           </div>
 
           {/* Desktop Navigation - Adjusted for proper text alignment */}
-          <div className="hidden lg:flex lg:ml-12 lg:items-center lg:space-x-2">
+          <div className="hidden lg:flex lg:ml-10 lg:items-center lg:space-x-2">
             <div className="flex space-x-2 md:space-x-2">
               {navigation.map((item) => (
                 <NavLink
@@ -85,7 +85,7 @@ const Navbar1 = () => {
             {/* Toggle theme icon */}
             <DarkModeToggler />
 
-            <button className="bg-primary w-[100px] h-[40px] lg:w-[130px] lg:h-[45px] text-text items-center justify-center rounded-xl text-base lg:text-sm font-semibold hover:bg-blue-700 transition-colors whitespace-nowrap ml-2 dark:text-white dark:border-neutral4 dark:hover:bg-neutral3 dark:hover:text-white">
+            <button className="bg-primary w-[100px] h-[40px] lg:w-[111px] lg:h-[45px] text-text items-center justify-center rounded-xl text-base lg:text-sm font-semibold hover:bg-blue-700 transition-colors whitespace-nowrap ml-2 dark:text-white dark:border-neutral4 dark:hover:bg-neutral3 dark:hover:text-white">
               <Link to="/contact">CONTACT US</Link>
             </button>
           </div>

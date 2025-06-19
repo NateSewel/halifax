@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import HeroImage from "../assets/HeroImg1.webp";
-import buttonIcon from "../assets/buttonIcon.png";
+// import buttonIcon from "../assets/buttonIcon.png";
 // import logo1 from "../assets/Icons/Amazon.png";
 // import logo2 from "../assets/Icons/Google.png";
 import logo3 from "../assets/Icons/TechSynergy.png";
@@ -13,8 +13,9 @@ import logo3 from "../assets/Icons/TechSynergy.png";
 // import logo9 from "../assets/Icons/Zapier.png";
 // Button icons
 import { FaLongArrowAltRight } from "react-icons/fa";
-// import { IoIosArrowDropdown } from "react-icons/io";
+import { IoIosArrowDropdown } from "react-icons/io";
 import { MdArrowOutward } from "react-icons/md";
+import { Link } from "react-router";
 
 // CountdownTimer component remains the same
 const CountdownTimer = () => {
@@ -156,7 +157,7 @@ const SponsorLogos = () => {
 
 const Hero = () => {
   return (
-    <section className="mx-auto w-[86%]">
+    <section className="mx-auto md:w-[86%]">
       <div className="relative mt-4">
         {/* Hero section with semi-transparent background image */}
         <div className="relative h-[400px] w-full justify-center items-center md:h-[657px] rounded-4xl overflow-hidden">
@@ -181,19 +182,29 @@ const Hero = () => {
                     Join a vibrant community of professionals,
                     <br /> innovators, and leaders at LinkedIn Local Halifax
                   </p>
-                  <div className="flex space-y-4 sm:space-x-4 sm:flex-row flex-col sm:space-y-0 pb-2">
-                    <button className=" bg-primary hover:bg-blue-700 text-xs md:text-sm cursor-pointer text-white md:px-6 md:py-3 p-3 w-36 md:w-42 rounded-lg flex items-center gap-3 transition-colors">
-                      GET TICKET
-                      <img
-                        src={buttonIcon}
-                        alt="icon"
-                        className="brightness-0 invert"
-                      />
-                      {/* <IoIosArrowDropdown className="text-xl rounded-lg font-bold" /> */}
-                    </button>
-                    <button className="flex items-center justify-between text-xs md:text-sm gap-3 border border-text hover:bg-text1 hover:text-white cursor-pointer hover:bg-opacity-10 text-text md:px-6 md:py-3 p-3 w-36 md:w-42 rounded-lg transition-colors">
-                      CONTACT US <FaLongArrowAltRight />
-                    </button>
+                  <div className="flex flex-row space-x-4">
+                    {/* Button1 */}
+                    <div>
+                      <Link to="/">
+                        <button className=" bg-primary hover:bg-blue-700 text-xs md:text-sm cursor-pointer text-white md:px-3 md:py-3 px-2 py-3 rounded-lg flex items-center gap-3 transition-colors text-center">
+                          GET TICKET
+                          {/* <img
+                            src={buttonIcon}
+                            alt="icon"
+                            className="brightness-0 invert"
+                          /> */}
+                          <IoIosArrowDropdown className="text-xl rounded-lg font-bold" />
+                        </button>
+                      </Link>
+                    </div>
+                    {/* Button2 */}
+                    <div>
+                      <Link to="/contact">
+                        <button className="flex items-center text-center justify-between text-xs md:text-sm gap-3 border border-text hover:bg-text1 hover:text-white cursor-pointer hover:bg-opacity-10 text-text md:px-3 md:py-3 px-2 py-3 rounded-lg transition-colors">
+                          CONTACT US <FaLongArrowAltRight />
+                        </button>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -202,8 +213,8 @@ const Hero = () => {
         </div>
 
         {/* Countdown box positioned at bottom-right */}
-        <div className="md:absolute mt-2 md:right-3 sm:right-4 md:bottom-0 transform md:translate-x-4 md:translate-y-0 bg-footer p-8 md:p-6 rounded-tl-4xl w-[384px] h-[217px] max-w-xs">
-          <h2 className="md:text-4xl text-2xl font-bold text-gray-800 dark:text-text">
+        <div className="md:absolute mt-10 md:right-3 md:bottom-0 transform md:translate-x-4 md:translate-y-0 bg-footer md:p-6 rounded-tl-4xl md:w-[384px] md:h-[217px] md:max-w-xs">
+          <h2 className="md:text-4xl text-2xl md:text-start text-center font-bold text-gray-800 dark:text-text">
             We Are Getting Ready
           </h2>
           <CountdownTimer />

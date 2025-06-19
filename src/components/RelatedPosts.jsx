@@ -118,15 +118,15 @@ const RelatedPosts = () => {
 
   const visibleBlogs = blogs.slice(currentIndex, currentIndex + postsPerPage);
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div className="mt-10">
+    <div className="container mx-auto">
+      <div className="mt-10 md:px-15">
         {/* Sponsor Contents */}
-        <div className="bg-primary w-[47px] h-8 items-center justify-center rounded-sm md:mt-20 mb-4 m-5">
+        <div className="bg-primary w-[47px] h-8 items-center justify-center rounded-sm md:mt-20 mb-4">
           <button className="text-primary1 font-medium text-sm items-center justify-center p-1 dark:text-text">
             Blogs
           </button>
         </div>
-        <div className="m-5">
+        <div className="">
           <h1 className="text-dark1 text-xl md:text-3xl font-semibold dark:text-white">
             Related Blogs
           </h1>
@@ -139,7 +139,7 @@ const RelatedPosts = () => {
         </div>
       </div>
       {/* Blog Posts */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-8 md:mt-2 gap-6 md:p-10 md:px-14">
         {visibleBlogs.map((blog) => (
           <div key={blog.id} className="flex justify-center">
             <RelatedPostsCard blog={blog} />
@@ -147,7 +147,7 @@ const RelatedPosts = () => {
         ))}
       </div>
       {/* Navigation Arrows and Blog Posts */}
-      <div className="flex justify-end mt-4 space-x-4">
+      <div className="flex justify-end mt-4 md:mt-0 space-x-4 md:px-15">
         <button
           onClick={prevPosts}
           disabled={currentIndex === 0}
