@@ -56,10 +56,10 @@ const images = [
 
 export default function Gallery() {
   const onInit = () => {
-    console.log("lightGallery has been initialized");
+    // console.log("lightGallery has been initialized");
   };
   return (
-    <div className="mt-10 md:mt-20 px-3 md:px-25">
+    <div className="mt-10 md:mt-20">
       <LightGallery
         onInit={onInit}
         speed={500}

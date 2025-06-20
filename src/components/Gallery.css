@@ -1,6 +1,6 @@
 body {
   /* background: #ffffff; */
-  margin: 18px;
+  margin: 8px;
 }
 
 .lg-react-element {
@@ -12,7 +12,7 @@ img {
   max-width: 100%;
   display: block;
   padding: 5px 0px;
-  border-radius: 20px;
+  border-radius: 10px;
   transition: transform 0.2s;
 }
 
