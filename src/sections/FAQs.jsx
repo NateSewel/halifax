@@ -73,7 +73,7 @@ const FAQs = () => {
 
   useEffect(() => {
     // Initialize EmailJS with your public key
-    emailjs.init("YOUR_PUBLIC_KEY_HERE");
+    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
   }, []);
 
   const handleSubmit = async (e) => {
@@ -82,8 +82,8 @@ const FAQs = () => {
     try {
       // Send email using EmailJS
       await emailjs.send(
-        "YOUR_SERVICE_ID_HERE", // Your EmailJS service ID
-        "YOUR_TEMPLATE_ID_HERE", // Your EmailJS template ID
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         {
           from_name: name,
           from_email: email,
