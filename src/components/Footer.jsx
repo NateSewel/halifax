@@ -45,14 +45,7 @@ const Footer = () => {
                 <h4 className="text-sm font-semibold text-gray-700 mb-2 dark:text-white">
                   Address:
                 </h4>
-                <p className="text-gray-600 dark:text-text">
-                  Arthur Irving
-                  <br />
-                  Entrepreneurship Centre
-                  <br />
-                  @ Saint Mary's University –<br />
-                  5907 Gorsebrook Ave, Halifax.
-                </p>
+                <p className="text-gray-600 dark:text-text">Halifax</p>
               </div>
 
               <div className="mt-6">
@@ -60,8 +53,6 @@ const Footer = () => {
                   Contact:
                 </h4>
                 <p className="text-gray-600 dark:text-text">
-                  1800 123 4567
-                  <br />
                   info@linkedinlocalhalifax.com
                 </p>
               </div>
@@ -85,13 +76,13 @@ const Footer = () => {
                   <FaInstagram size={20} className="dark:text-text" />
                 </a>
                 <a
-                  href="#"
+                  href=""
                   className="text-gray-600 hover:text-linkedin transition-colors"
                 >
                   <FaXTwitter size={20} className="dark:text-text" />
                 </a>
                 <a
-                  href="https://www.linkedin.com/company/linkedinlocalhalifax/"
+                  href="https://www.linkedin.com/company/linkedinlocalhalifax/?viewAsMember=true"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-600 hover:text-linkedin transition-colors"

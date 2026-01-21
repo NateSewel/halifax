@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 // import { ChevronDown, ChevronUp } from "lucide-react";
 // import { CiCirclePlus, CiCircleMinus } from "react-icons/ci";
 import { FaMinus, FaPlus } from "react-icons/fa6";
+import emailjs from "@emailjs/browser";
 
 const faqItems = [
   {
@@ -17,12 +18,12 @@ const faqItems = [
   {
     question: "How Can I Contact The Organizers?",
     answer:
-      "You can reach the organizers by emailing info@linkedinlocalhalifax.com or by calling 1800 123 4567. You can also send a message through the contact form on our website, and one of our team members will get back to you promptly.",
+      "You can reach the organizers by emailing info@linkedinlocalhalifax.com. You can also send a message through the contact form on our website, and one of our team members will get back to you promptly.",
   },
   {
     question: "How Do I Become A Sponsor?",
     answer:
-      "We offer various sponsorship packages designed to give your organization visibility among our professional audience. Please contact our sponsorship team at sponsors@linkedinlocalhalifax.com for a detailed prospectus and to discuss how we can customize a partnership that aligns with your marketing goals.",
+      "We offer various sponsorship packages designed to give your organization visibility among our professional audience. Please contact our sponsorship team at info@linkedinlocalhalifax.com for a detailed prospectus and to discuss how we can customize a partnership that aligns with your marketing goals.",
   },
 ];
 
@@ -70,14 +71,36 @@ const FAQs = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
 
-  const handleSubmit = (e) => {
+  useEffect(() => {
+    // Initialize EmailJS with your public key
+    emailjs.init("YOUR_PUBLIC_KEY_HERE");
+  }, []);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Question submitted:", { name, email, question });
-    // Reset the form
-    setName("");
-    setEmail("");
-    setQuestion("");
-    alert("Thank you for your question! We'll get back to you soon.");
+
+    try {
+      // Send email using EmailJS
+      await emailjs.send(
+        "YOUR_SERVICE_ID_HERE", // Your EmailJS service ID
+        "YOUR_TEMPLATE_ID_HERE", // Your EmailJS template ID
+        {
+          from_name: name,
+          from_email: email,
+          question: question,
+          to_email: "info@linkedinlocalhalifax.com",
+        },
+      );
+
+      alert("Thank you for your question! We'll get back to you soon.");
+      // Reset the form
+      setName("");
+      setEmail("");
+      setQuestion("");
+    } catch (error) {
+      console.error("Error sending email:", error);
+      alert("Failed to send your question. Please try again later.");
+    }
   };
   return (
     <section className="container mx-auto md:px-16 py-12">

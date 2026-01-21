@@ -81,7 +81,7 @@ const speakers_2 = [
     name: "Jonathan Okwo",
     title: "Change Management Lead / Mentor",
     img: Speaker9,
-    linkedin: "https://www.linkedin.com/in/andrew-ray-2414b9173/",
+    linkedin: "https://www.linkedin.com/in/jonathanokwo/",
   },
   // {
   //   name: "Harry Madusha",

@@ -16,20 +16,20 @@ const organizers = [
     name: "Paul Williams",
     title: "Program Coordinator Halifax Partnership",
     img: Organizer2,
-    linkedin: "https://www.linkedin.com/in/Paulwilliams/",
+    linkedin: " https://www.linkedin.com/in/itessentials/",
   },
   {
     name: "Fatimah Akande",
     title:
       "Executive Director, Equity and Engagement Division at Government of Nova Scotia",
     img: Organizer3,
-    linkedin: "https://www.linkedin.com/in/fatimah-akande/",
+    linkedin: "https://www.linkedin.com/in/fatimah-akande01/",
   },
   {
     name: "Ekow Nana",
     title: "Director of Attraction at Invest Nova Scotia",
     img: Organizer4,
-    linkedin: "https://www.linkedin.com/in/andrew-ray-2414b9173/",
+    linkedin: "https://www.linkedin.com/in/ekowkorsah/",
   },
 ];
 

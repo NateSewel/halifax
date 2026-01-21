@@ -125,7 +125,13 @@ const BecomeASponsor = () => {
                       Halifax’s top professionals. Sponsoring LinkedIn Local
                       Halifax puts your brand in front of an engaged, ambitious,
                       and growing community of business leaders, creatives, and
-                      change-makers.
+                      change-makers. Interested? Send an email to
+                      <a
+                        href="mailto:info@linkedinlocalhalifax.com"
+                        className="text-primary hover:underline ml-1"
+                      >
+                        info@linkedinlocalhalifax.com
+                      </a>
                     </p>
                     {/* Cards */}
                     <div className="mt-10 md:mt-20">

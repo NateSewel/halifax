@@ -42,7 +42,7 @@ const speakers_1 = [
     name: "Andrew Ray",
     title: "Member Board of Governors - TRIUMF",
     img: Speaker5,
-    linkedin: "https://www.linkedin.com/in/Andrewray/",
+    linkedin: "https://www.linkedin.com/in/andrew-ray-phathom/",
   },
   {
     name: "Harry Madusha",

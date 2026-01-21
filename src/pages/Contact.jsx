@@ -3,6 +3,7 @@ import MainLayout from "../layout/MainLayout";
 import { FaRegEnvelope } from "react-icons/fa6";
 import { BsTelephone } from "react-icons/bs";
 import { CiLocationOn, CiLinkedin, CiTwitter } from "react-icons/ci";
+import { FaInstagram } from "react-icons/fa";
 import { LuUserRound } from "react-icons/lu";
 import { RiFacebookCircleLine } from "react-icons/ri";
 import Envelop from "../assets/envelop.png";
@@ -112,7 +113,7 @@ const FormField = React.memo(
       </div>
       {error && <p className="mt-1 text-sm text-red-600">{error}</p>}
     </div>
-  )
+  ),
 );
 
 export default function Contact() {
@@ -176,7 +177,7 @@ export default function Contact() {
         }));
       }
     },
-    [errors]
+    [errors],
   );
 
   // Handle form submission
@@ -347,7 +348,7 @@ export default function Contact() {
                   {submitStatus === "success" && (
                     <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg">
                       <p className="text-green-800 text-center">
-                        ✅ Your message has been sent successfully!
+                        Your message has been sent successfully!
                       </p>
                     </div>
                   )}
@@ -355,7 +356,7 @@ export default function Contact() {
                   {submitStatus === "error" && (
                     <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg">
                       <p className="text-red-800 text-center">
-                        ❌ Something went wrong. Please try again.
+                        Something went wrong. Please try again.
                       </p>
                     </div>
                   )}
@@ -383,7 +384,7 @@ const ContactInfoSidebar = React.memo(() => {
           <img src={Envelop} alt="email icon" width={50} height={50} />
         </div>
       ),
-      text: "support@halifax.com",
+      text: "info@linkedinlocalhalifax.com",
     },
     {
       icon: (
@@ -391,7 +392,7 @@ const ContactInfoSidebar = React.memo(() => {
           <img src={Telephone} alt="phone icon" width={50} height={50} />
         </div>
       ),
-      text: "+91 00000 00000",
+      text: "+1 0000000000",
     },
     {
       icon: (
@@ -405,13 +406,28 @@ const ContactInfoSidebar = React.memo(() => {
 
   const socialIcons = [
     {
-      icon: <RiFacebookCircleLine className="w-5 h-5" />,
+      icon: (
+        <RiFacebookCircleLine
+          href="https://www.facebook.com/profile.php?id=61556356659781&mibextid=wwXIfr"
+          className="w-5 h-5"
+        />
+      ),
     },
     {
-      icon: <CiTwitter className="w-5 h-5" />,
+      icon: (
+        <FaInstagram
+          href="https://www.instagram.com/linkedinlocalhalifax/"
+          className="w-5 h-5"
+        />
+      ),
     },
     {
-      icon: <CiLinkedin className="w-5 h-5" />,
+      icon: (
+        <CiLinkedin
+          href="https://www.linkedin.com/company/linkedinlocalhalifax/?viewAsMember=true"
+          className="w-5 h-5"
+        />
+      ),
     },
   ];
 
@@ -436,7 +452,9 @@ const ContactInfoSidebar = React.memo(() => {
           {socialIcons.map((social, index) => (
             <a
               key={index}
-              href="#"
+              href={social.icon.props.href}
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-10 h-10 bg-blue-100 text-form rounded-full flex items-center justify-center hover:bg-blue-200 transition-colors"
             >
               {social.icon}
