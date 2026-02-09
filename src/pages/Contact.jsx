@@ -10,6 +10,7 @@ import Envelop from "../assets/envelop.png";
 import User from "../assets/user.png";
 import Gps from "../assets/gps.png";
 import Telephone from "../assets/telephone.png";
+import emailjs from "@emailjs/browser";
 
 // AOS
 import Aos from "aos";
@@ -194,12 +195,23 @@ export default function Contact() {
     }
 
     try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      // Send email using EmailJS
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: `${formData.firstName} ${formData.lastName}`,
+          from_email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+          to_email: "info@linkedinlocalhalifax.com",
+        },
+      );
       setSubmitStatus("success");
       setFormData(INITIAL_FORM_DATA);
       setErrors({});
     } catch (error) {
+      console.error("Error sending email:", error);
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
@@ -210,6 +222,8 @@ export default function Contact() {
     Aos.init({
       duration: 3000,
     });
+    // Initialize EmailJS with your public key
+    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
   }, []);
 
   return (

@@ -70,6 +70,8 @@ const FAQs = () => {
   const [question, setQuestion] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(""); // "success" or "error"
 
   useEffect(() => {
     // Initialize EmailJS with your public key
@@ -78,6 +80,8 @@ const FAQs = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus("");
 
     try {
       // Send email using EmailJS
@@ -92,14 +96,16 @@ const FAQs = () => {
         },
       );
 
-      alert("Thank you for your question! We'll get back to you soon.");
+      setSubmitStatus("success");
       // Reset the form
       setName("");
       setEmail("");
       setQuestion("");
     } catch (error) {
       console.error("Error sending email:", error);
-      alert("Failed to send your question. Please try again later.");
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
     }
   };
   return (
@@ -191,10 +197,22 @@ const FAQs = () => {
 
               <button
                 type="submit"
-                className="w-full bg-primary hover:bg-blue-700 cursor-pointer rounded-lg text-white font-bold py-3 dark:text-white"
+                disabled={isSubmitting}
+                className={`w-full bg-primary hover:bg-blue-700 cursor-pointer rounded-lg text-white font-bold py-3 dark:text-white ${isSubmitting ? "opacity-50 cursor-not-allowed" : ""}`}
               >
-                SEND YOUR MESSAGE
+                {isSubmitting ? "SENDING..." : "SEND YOUR MESSAGE"}
               </button>
+
+              {submitStatus === "success" && (
+                <p className="mt-4 text-green-600 font-medium text-center">
+                  Thank you! Your question has been sent successfully.
+                </p>
+              )}
+              {submitStatus === "error" && (
+                <p className="mt-4 text-red-600 font-medium text-center">
+                  Failed to send message. Please try again.
+                </p>
+              )}
             </form>
           </div>
         </div>
