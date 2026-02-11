@@ -204,12 +204,12 @@ const FAQs = () => {
               </button>
 
               {submitStatus === "success" && (
-                <p className="mt-4 text-green-600 font-medium text-center">
+                <p className="mt-4 text-blue-400 font-medium text-center">
                   Thank you! Your question has been sent successfully.
                 </p>
               )}
               {submitStatus === "error" && (
-                <p className="mt-4 text-red-600 font-medium text-center">
+                <p className="mt-4 text-red-400 font-medium text-center">
                   Failed to send message. Please try again!.
                 </p>
               )}
