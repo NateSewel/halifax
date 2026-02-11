@@ -4,9 +4,9 @@ import HeroImage from "../assets/HeroImg1.webp";
 // import buttonIcon from "../assets/buttonIcon.png";
 // import logo1 from "../assets/Icons/Amazon.png";
 // import logo2 from "../assets/Icons/Google.png";
-import logo3 from "../assets/Icons/TechSynergy.png";
-// import logo4 from "../assets/Icons/Netflix.png";
-// import logo5 from "../assets/Icons/WhatsApp.png";
+import logo3 from "../assets/techsynergy.png";
+import logo4 from "../assets/smusa.png";
+import logo5 from "../assets/irving.png";
 // import logo6 from "../assets/Icons/Zoom.png";
 // import logo7 from "../assets/Icons/Slack.png";
 // import logo8 from "../assets/Icons/Dropbox.png";
@@ -65,8 +65,8 @@ const SponsorLogos = () => {
   const sponsors = [
     // { name: "Amazon", logo: logo1 },
     // { name: "Google", logo: logo2 },
-    { name: "Tech Synergy", logo: logo3 },
-    { name: "Tech Synergy", logo: logo3 },
+    { name: "Smusa", logo: logo4 },
+    { name: "Irvin", logo: logo5 },
     { name: "Tech Synergy", logo: logo3 },
     // { name: "Netflix", logo: logo4 },
     // { name: "WhatsApp", logo: logo5 },
@@ -87,7 +87,7 @@ const SponsorLogos = () => {
 
   return (
     <div className="md:mt-16 px-4">
-      <h3 className="text-center text-gray-600 mb-8 text-lg font-medium">
+      <h3 className="text-center font-bold text-gray-800 dark:text-text mb-8 text-lg font-medium">
         Our Sponsor
       </h3>
 
@@ -103,7 +103,7 @@ const SponsorLogos = () => {
             <img
               src={sponsor.logo}
               alt={sponsor.name}
-              className="h-8 md:h-10 object-contain"
+              className="h-6 md:h-14 object-cover"
             />
           </div>
         ))}
@@ -222,7 +222,9 @@ const Hero = () => {
       </div>
 
       {/* Sponsors section with 5x5 grid */}
-      <div className="mx-auto pt-0 mt-0 mb-12">{/* <SponsorLogos /> */}</div>
+      <div className="mx-auto pt-0 mt-0 mb-12">
+        <SponsorLogos />
+      </div>
     </section>
   );
 };

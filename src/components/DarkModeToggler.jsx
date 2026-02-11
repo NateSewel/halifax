@@ -1,6 +1,7 @@
 import React from "react";
 import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
 import { CiLight } from "react-icons/ci";
+import { IoMdMoon } from "react-icons/io";
 
 import { useDarkMode } from "../context/ThemeContext";
 
@@ -11,7 +12,7 @@ const DarkModeToggler = () => {
       onClick={() => setDarkMode(!darkMode)}
       className="text-2xl cursor-pointer pt-1 transition-all duration-300 ease-in-out hover:scale-110"
     >
-      {darkMode ? <CiLight /> : <MdOutlineLightMode />}
+      {darkMode ? <CiLight /> : <IoMdMoon className="text-3xl" />}
     </button>
   );
 };
