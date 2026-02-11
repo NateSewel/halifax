@@ -210,7 +210,7 @@ const FAQs = () => {
               )}
               {submitStatus === "error" && (
                 <p className="mt-4 text-red-600 font-medium text-center">
-                  Failed to send message. Please try again.
+                  Failed to send message. Please try again!.
                 </p>
               )}
             </form>
